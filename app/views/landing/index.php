@@ -198,8 +198,8 @@
 <section id="sarana" class="py-20 bg-white relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
-            <h2 class="text-yellow-600 font-bold tracking-widest text-sm uppercase mb-2">FASILITAS LABORATORIUM</h2>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black">Sarana Penunjang Praktikum</h2>
+            <h2 class="text-yellow-600 font-bold tracking-widest text-sm uppercase mb-2">SARANA & PRASARANA</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black">Fasilitas Akademik & Pendukung</h2>
         </div>
 
         <div class="relative">
@@ -208,18 +208,56 @@
             </div>
 
             <div class="space-y-24">
-                <?php foreach ($labs as $index => $lab): ?>
                 <?php
+                $facilities = [
+                    [
+                        'title' => 'Multimedia Laboratory',
+                        'category' => 'Laboratorium Terpadu',
+                        'description' => 'Fasilitas premium yang menunjang riset dan praktikum di bidang desain multimedia, grafika komputer, animasi 2D/3D, pemrograman game, pengolahan citra digital, serta pengolahan audio-video profesional.',
+                        'image' => 'assets/images/photo1701933053.jpeg',
+                        'icon' => 'bi-images'
+                    ],
+                    [
+                        'title' => 'Internet of Things (IoT) Laboratory',
+                        'category' => 'Laboratorium Terpadu',
+                        'description' => 'Pusat riset dan pengembangan teknologi IoT terintegrasi, berfokus pada physical layer (sensor & actuator), communication layer, microcontrollers, embedded systems, dan user interface security.',
+                        'image' => 'assets/images/FOTO%20FIKOM_4.jpg',
+                        'icon' => 'bi-cpu'
+                    ],
+                    [
+                        'title' => 'Working Space Indoor (Lantai 1 - Lantai 3)',
+                        'category' => 'Fasilitas Pendukung',
+                        'description' => 'Area kolaborasi indoor modern yang dilengkapi meja, kursi ergonomis, stopkontak, dan pendingin ruangan (AC) sentral untuk mendukung diskusi kelompok, belajar mandiri, dan pengerjaan proyek mahasiswa.',
+                        'image' => 'assets/images/WORKING%20SPACE_13.png',
+                        'icon' => 'bi-laptop'
+                    ],
+                    [
+                        'title' => 'Area Terbuka (Gazebo & Outdoor Space)',
+                        'category' => 'Fasilitas Pendukung',
+                        'description' => 'Tempat berdiskusi, berinteraksi, dan bersantai dengan suasana terbuka yang hijau, asri, dan segar di luar ruangan, dirancang untuk memicu inspirasi, kreativitas, dan kolaborasi antar-mahasiswa.',
+                        'image' => 'assets/images/PUBLIC%20SPACE%20LUAR.jpg',
+                        'icon' => 'bi-tree'
+                    ],
+                    [
+                        'title' => 'Computer Networking Laboratory',
+                        'category' => 'Laboratorium Terpadu',
+                        'description' => 'Menunjang kegiatan praktikum administrasi jaringan, komunikasi data, keamanan siber, konfigurasi routing & switching, subnetting, dan analisis performa jaringan komputer.',
+                        'image' => 'assets/images/photo1701933053.jpeg',
+                        'icon' => 'bi-diagram-3'
+                    ],
+                    [
+                        'title' => 'Start-Up & Microcontroller Laboratory',
+                        'category' => 'Laboratorium Terpadu',
+                        'description' => 'Wadah inkubasi bagi tim start-up mahasiswa untuk perancangan perangkat lunak, serta laboratorium praktikum elektronika dasar, robotika, sistem kendali cerdas, dan pemrograman mikroprosesor.',
+                        'image' => 'assets/images/FOTO%20FIKOM_4.jpg',
+                        'icon' => 'bi-rocket-takeoff'
+                    ]
+                ];
+
+                foreach ($facilities as $index => $fac): 
                     $isEven = ($index % 2 == 0);
-                    $staticImages = [
-                        'assets/images/FOTO%20FIKOM_4.jpg',
-                        'assets/images/WORKING%20SPACE_13.png',
-                        'assets/images/PUBLIC%20SPACE%20LUAR.jpg',
-                        'assets/images/photo1701933053.jpeg'
-                    ];
-                    $staticImage = $staticImages[$index % count($staticImages)];
-                    $bgImage = BASE_URL . '/' . $staticImage;
-                    ?>
+                    $bgImage = BASE_URL . '/' . $fac['image'];
+                ?>
                 <div class="relative flex flex-col md:flex-row items-center justify-between w-full z-10">
                     <div
                         class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-brand-yellow shadow-lg z-20 flex items-center justify-center">
@@ -227,34 +265,21 @@
                     </div>
                     <div
                         class="w-full md:w-[48%] pl-20 md:pl-0 <?= $isEven ? 'md:text-right order-2 md:order-1 pr-0 md:pr-6' : 'order-2 md:order-3 pl-0 md:pl-6' ?>">
-                        <h3 class="text-2xl md:text-3xl font-extrabold text-brand-black mb-4"><?= e($lab['lab_name']) ?>
+                        <span class="inline-block bg-brand-yellow/20 text-yellow-700 text-xs px-2.5 py-1 rounded-md font-bold uppercase tracking-wider mb-2 border border-brand-yellow/30">
+                            <?= $fac['category'] ?>
+                        </span>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-brand-black mb-4">
+                            <?= e($fac['title']) ?>
                         </h3>
                         <p class="text-slate-600 leading-relaxed mb-6">
-                            <?= e($lab['description'] ?? 'Laboratorium dengan spesifikasi tinggi.') ?></p>
-                        <div class="flex items-center gap-4 justify-start <?= $isEven ? 'md:justify-end' : '' ?>">
-                            <div class="text-center group">
-                                <div
-                                    class="w-16 py-2 bg-brand-yellow/20 rounded-t-lg text-xl font-black text-brand-black group-hover:bg-brand-yellow transition-colors">
-                                    <?= $lab['pc_count'] ?? 0 ?></div>
-                                <div
-                                    class="w-16 py-1 bg-slate-100 border-t border-slate-300 rounded-b-lg text-[10px] font-bold text-slate-500 uppercase">
-                                    PC</div>
-                            </div>
-                            <div class="text-center group">
-                                <div
-                                    class="w-16 py-2 bg-brand-black/10 rounded-t-lg text-xl font-black text-brand-black group-hover:bg-brand-black group-hover:text-brand-yellow transition-colors">
-                                    <?= $lab['tv_count'] ?? 0 ?></div>
-                                <div
-                                    class="w-16 py-1 bg-slate-50 border-t border-slate-200 rounded-b-lg text-[10px] font-bold text-slate-500 uppercase">
-                                    LCD</div>
-                            </div>
-                        </div>
+                            <?= e($fac['description']) ?>
+                        </p>
                     </div>
                     <div
                         class="w-full md:w-[48%] pl-20 md:pl-0 mb-6 md:mb-0 <?= $isEven ? 'order-1 md:order-3 pl-0 md:pl-6' : 'order-1 md:order-1 pr-0 md:pr-6' ?>">
                         <div
                             class="relative group rounded-2xl shadow-xl overflow-hidden border-4 border-white transform transition-transform duration-500 hover:scale-[1.02]">
-                            <img src="<?= e($bgImage) ?>" alt="<?= e($lab['lab_name']) ?>" loading="lazy"
+                            <img src="<?= e($bgImage) ?>" alt="<?= e($fac['title']) ?>" loading="lazy"
                                 class="w-full h-auto object-cover aspect-video">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
