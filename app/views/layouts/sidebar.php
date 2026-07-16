@@ -16,11 +16,11 @@ function isSidebarActive($uri, $path)
 
     <div class="h-20 flex items-center px-6 border-b border-slate-800 bg-slate-900 shrink-0">
         <a href="<?= url('/admin/dashboard') ?>" class="flex items-center gap-3 group">
-            <img src="<?= url('/assets/images/logo-iclabs.png') ?>" alt="Logo ICLABS"
+            <img src="<?= url('/assets/images/LogoFikom_kuning.png') ?>" alt="Logo FIKOM UMI"
                 class="h-10 w-auto object-contain">
 
             <div class="flex flex-col">
-                <span class="text-lg font-bold text-white tracking-wide leading-none">ICLABS</span>
+                <span class="text-lg font-bold text-white tracking-wide leading-none">FIKOM UMI</span>
                 <span class="text-[10px] font-medium text-slate-500 uppercase tracking-widest mt-1">Admin Panel</span>
             </div>
         </a>

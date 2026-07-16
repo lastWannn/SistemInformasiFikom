@@ -7,7 +7,7 @@
     <title><?= $title ?? 'ICLABS' ?> - Laboratory Information System</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?= BASE_URL ?>/assets/images/logo-iclabs.png">
+    <link rel="icon" type="image/png" href="<?= BASE_URL ?>/assets/images/LogoFikom_kuning.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -31,6 +31,12 @@
                             900: '#0c4a6e',
                         },
                         secondary: '#64748b', // Slate Grey untuk teks
+
+                        // Brand baru untuk landing page (display signage)
+                        brand: {
+                            yellow: '#FFC81A',
+                            black: '#131218',
+                        },
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],

@@ -1,5 +1,5 @@
 <?php
-$title = 'Detail Praktikum - ' . e($schedule['course_name']);
+$title = 'Detail Kuliah - ' . e($schedule['course_name']);
 
 // Helper URL Foto (Tetap dipakai agar logika foto aman)
 function getPhotoUrl($url, $name)

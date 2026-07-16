@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /iclabs/public/
+RewriteBase /SistemInformasiFikom/public/
 
 # If not a file or directory, route to index.php
 RewriteCond %{REQUEST_FILENAME} !-f

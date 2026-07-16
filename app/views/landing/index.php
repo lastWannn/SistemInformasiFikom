@@ -1,96 +1,83 @@
-<?php $title = 'Home - ICLABS'; ?>
+<?php $title = 'Home - FIKOM'; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 <?php include APP_PATH . '/views/layouts/navbar.php'; ?>
 
 <section class="relative bg-white overflow-hidden pt-4 pb-12">
     <div
-        class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-sky-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-yellow-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob">
     </div>
     <div
-        class="absolute top-0 left-0 -ml-20 -mt-20 w-[500px] h-[500px] bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
+        class="absolute top-0 left-0 -ml-20 -mt-20 w-[500px] h-[500px] bg-yellow-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000">
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div id="hero-carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="10000">
 
-            <div class="relative h-[650px] md:h-[550px] overflow-hidden rounded-2xl">
+            <div class="relative h-[650px] md:h-[550px] overflow-hidden rounded-2xl border border-slate-200 shadow-xl">
 
                 <div class="hidden duration-1000 ease-in-out" data-carousel-item="active">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full px-12 md:px-20">
-                        <div class="space-y-6 text-center lg:text-left pt-10 lg:pt-0">
-                            <div>
-                                <h2 class="text-sky-500 font-bold tracking-widest text-sm uppercase mb-2">SISTEM
-                                    INFORMASI</h2>
-                                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight">
-                                    ICLABS <br>
-                                    <span class="text-2xl md:text-3xl font-bold text-slate-600 block mt-2">Fakultas Ilmu
-                                        Komputer</span>
-                                    <span class="text-xl md:text-2xl font-medium text-slate-500 block">Universitas
-                                        Muslim Indonesia</span>
+                    <div class="w-full h-full relative">
+                        <img src="<?= BASE_URL ?>/assets/images/GEDUNG%20FIKOM%20UMI%20(1)%20(2).jpg" alt="Gedung FIKOM UMI" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/1200x600/FFF8E7/Eab308?text=Hero+Banner+Belum+Diunggah'">
+                        
+                        <!-- Overlay Gradient & Text -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-brand-black/95 via-brand-black/70 to-transparent flex items-center px-6 md:px-16 lg:px-24">
+                            <div class="max-w-2xl text-left">
+                                <span class="inline-block bg-brand-yellow text-brand-black text-xs md:text-sm font-extrabold px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-sm mb-4">
+                                    Fakultas Ilmu Komputer
+                                </span>
+                                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+                                    FIKOM <span class="text-brand-yellow">UMI</span>
                                 </h1>
+                                <p class="text-slate-200 text-xs md:text-sm lg:text-base leading-relaxed font-medium">
+                                    Perpaduan ilmu pengetahuan dan nilai-nilai keislaman akan membawa Anda pada sebuah pengalaman belajar yang unik, yang dapat Anda temukan di Fakultas Ilmu Komputer. Hal tersebut tentu saja untuk membentuk karakter yang berintegritas, kreatif dan inovatif. Dengan dukungan lingkungan belajar yang kondusif, kembangkan segala potensi yang Anda miliki.
+                                </p>
+                                <div class="mt-8 flex flex-wrap gap-4">
+                                    <a href="#sarana" class="inline-flex items-center justify-center px-5 py-3 text-xs md:text-sm font-bold rounded-xl text-brand-black bg-brand-yellow hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-yellow transition-all shadow-lg hover:scale-105">
+                                        Lihat Fasilitas <i class="bi bi-arrow-down-short ml-1 text-lg"></i>
+                                    </a>
+                                    <a href="<?= url('/schedule') ?>" class="inline-flex items-center justify-center px-5 py-3 border-2 border-white/20 text-xs md:text-sm font-bold rounded-xl text-white hover:bg-white/10 hover:border-white focus:outline-none transition-all hover:scale-105">
+                                        Jadwal Kuliah <i class="bi bi-calendar-event ml-2"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <p class="text-slate-500 text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-                                Platform monitoring sistem informasi laboratorium terpadu untuk manajemen praktikum yang
-                                efisien dan transparan.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                <a href="<?= url('/schedule') ?>"
-                                    class="px-8 py-3 bg-blue-600 text-white font-bold rounded-full shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition-transform hover:-translate-y-1">
-                                    Lihat Jadwal
-                                </a>
-                                <a href="<?= url('/login') ?>"
-                                    class="px-8 py-3 bg-white text-blue-600 border-2 border-blue-100 font-bold rounded-full hover:border-blue-600 transition-all">
-                                    Login Portal
-                                </a>
-                            </div>
-                        </div>
-                        <div class="hidden lg:flex justify-center items-center">
-                            <img src="<?= BASE_URL ?>/assets/images/logo-iclabs.png" alt="ICLABS Tech"
-                                class="relative z-10 w-full max-w-md animate-float"
-                                onerror="this.src='https://cdn-icons-png.flaticon.com/512/2083/2083213.png'">
                         </div>
                     </div>
                 </div>
 
-                <?php foreach ($labSlides as $index => $slide): ?>
                 <div class="hidden duration-1000 ease-in-out" data-carousel-item>
                     <div class="h-full flex flex-col pt-8 px-4 md:px-20">
 
                         <div class="text-center mb-6">
-                            <h2 class="text-xl font-bold text-slate-400 tracking-widest uppercase">JADWAL HARI INI</h2>
-                            <div class="flex items-center justify-center gap-2 mt-1">
-                                <span class="text-3xl md:text-5xl font-black text-slate-800 uppercase">
-                                    <?= e($slide['lab_info']['lab_name']) ?>
-                                </span>
-                            </div>
+                            <h2 class="text-xl font-bold text-yellow-600/80 tracking-widest uppercase">JADWAL HARI INI</h2>
                             <div
-                                class="mt-2 inline-block bg-sky-50 text-sky-600 px-4 py-1 rounded-full text-sm font-bold border border-sky-100 shadow-sm">
+                                class="mt-2 inline-block bg-brand-yellow text-brand-black px-4 py-1 rounded-full text-sm font-bold shadow-sm">
                                 <?= $currentDayName ?>, <?= $currentDate ?>
                             </div>
                         </div>
 
                         <div
-                            class="w-full max-w-5xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl border border-white/40 shadow-xl overflow-hidden flex-1 mb-8 relative">
+                            class="w-full max-w-5xl mx-auto bg-slate-50 rounded-2xl border border-slate-200 shadow-xl overflow-hidden flex-1 mb-8 relative">
                             <div class="overflow-y-auto h-full absolute inset-0 custom-scrollbar p-2">
 
                                 <div
-                                    class="grid grid-cols-12 gap-4 bg-slate-900/5 backdrop-blur-sm p-4 rounded-xl mb-3 text-xs font-bold uppercase text-slate-600 sticky top-0 z-10 hidden md:grid border border-slate-200/50">
+                                    class="grid grid-cols-12 gap-4 bg-white p-4 rounded-xl mb-3 text-xs font-bold uppercase text-slate-500 sticky top-0 z-10 hidden md:grid border border-slate-200 shadow-sm">
                                     <div class="col-span-2 text-center tracking-wider">Waktu</div>
-                                    <div class="col-span-3 tracking-wider pl-2">Mata Kuliah</div>
-                                    <div class="col-span-5 tracking-wider pl-2">Tim Pengajar</div>
+                                    <div class="col-span-3 tracking-wider pl-2">Mata Kuliah & Ruangan</div>
+                                    <div class="col-span-2 text-center tracking-wider">Kelas</div>
+                                    <div class="col-span-3 tracking-wider pl-2">Dosen</div>
                                     <div class="col-span-2 text-center tracking-wider">Status</div>
                                 </div>
 
-                                <?php if (empty($slide['schedules'])): ?>
+                                <?php if (empty($todaySchedules)): ?>
                                 <div class="flex flex-col items-center justify-center h-64 text-slate-400">
                                     <i class="bi bi-calendar-check text-4xl mb-3 opacity-50"></i>
-                                    <p class="font-medium">Tidak ada jadwal praktikum di ruangan ini.</p>
+                                    <p class="font-medium">Tidak ada jadwal kuliah hari ini.</p>
                                 </div>
                                 <?php else: ?>
                                 <div class="space-y-3">
-                                    <?php foreach ($slide['schedules'] as $sch): ?>
-                                    <div class="schedule-row group bg-white/60 hover:bg-white/90 transition-all rounded-xl border border-white/60 p-4 md:p-4 grid grid-cols-1 md:grid-cols-12 gap-4 items-center shadow-sm"
+                                    <?php foreach ($todaySchedules as $sch): ?>
+                                    <div class="schedule-row group bg-white hover:bg-yellow-50/40 transition-all rounded-xl border border-slate-200 border-l-4 border-l-brand-yellow p-4 md:p-4 grid grid-cols-1 md:grid-cols-12 gap-4 items-center shadow-sm"
                                         data-start="<?= $sch['start_time'] ?>" data-end="<?= $sch['end_time'] ?>">
 
                                         <div
@@ -98,56 +85,38 @@
                                             <div class="md:hidden text-xs font-bold text-slate-500 uppercase">Waktu
                                             </div>
                                             <div
-                                                class="font-mono font-bold text-slate-700 bg-white/80 border border-slate-100 px-3 py-1.5 rounded-lg inline-block shadow-sm">
+                                                class="font-mono font-bold text-brand-black bg-brand-yellow/20 border border-brand-yellow/40 px-3 py-1.5 rounded-lg inline-block shadow-sm">
                                                 <?= formatTime($sch['start_time']) ?> -
                                                 <?= formatTime($sch['end_time']) ?>
                                             </div>
                                         </div>
 
                                         <div class="md:col-span-3 pl-2">
-                                            <h3 class="font-bold text-slate-900 leading-tight text-base mb-1">
+                                            <h3 class="font-bold text-brand-black leading-tight text-base mb-1">
                                                 <?= e($sch['course_name']) ?>
                                             </h3>
-                                            <span
-                                                class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded-md border border-sky-100">
-                                                <i class="bi bi-people-fill"></i> Kelas <?= e($sch['class_code']) ?>
+                                            <span class="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+                                                <i class="bi bi-geo-alt-fill text-[8px]"></i> <?= e($sch['lab_name']) ?>
                                             </span>
                                         </div>
 
-                                        <div class="md:col-span-5 pl-2 flex flex-col justify-center gap-3">
+                                        <div class="md:col-span-2 text-center flex md:block items-center justify-between">
+                                            <div class="md:hidden text-xs font-bold text-slate-500 uppercase">Kelas</div>
+                                            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-black bg-brand-yellow/30 px-2.5 py-1 rounded-md border border-brand-yellow/40">
+                                                <i class="bi bi-people-fill"></i> <?= e($sch['class_code']) ?>
+                                            </span>
+                                        </div>
+
+                                        <div class="md:col-span-3 pl-2 flex flex-col justify-center">
                                             <div class="flex items-center gap-3">
-                                                <?php if (!empty($sch['lecturer_photo'])): ?>
-                                                <img src="<?= e($sch['lecturer_photo']) ?>"
-                                                    class="w-9 h-9 rounded-full object-cover border-2 border-white shadow-sm shrink-0">
-                                                <?php else: ?>
-                                                <div
-                                                    class="w-9 h-9 rounded-full bg-indigo-100 flex items-center justify-center text-[10px] font-bold text-indigo-600 border-2 border-white shadow-sm shrink-0">
-                                                    DS</div>
-                                                <?php endif; ?>
                                                 <div class="min-w-0">
-                                                    <p class="text-sm font-bold text-slate-800 truncate leading-snug">
+                                                    <p class="text-sm font-bold text-brand-black truncate leading-snug">
                                                         <?= e($sch['lecturer_name']) ?></p>
                                                     <p
                                                         class="text-[10px] text-slate-500 font-medium uppercase tracking-wide">
-                                                        Dosen Pengampu</p>
+                                                        Dosen</p>
                                                 </div>
                                             </div>
-
-                                            <?php if (!empty($sch['assistant_1_name'])): ?>
-                                            <div class="flex items-center gap-3 relative pl-1">
-                                                <div class="absolute left-4 -top-4 w-0.5 h-3 bg-slate-200"></div>
-                                                <div
-                                                    class="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center text-[9px] font-bold text-emerald-600 border border-emerald-200 shrink-0 ml-1">
-                                                    AS</div>
-                                                <div class="min-w-0">
-                                                    <p class="text-xs font-bold text-slate-700 truncate leading-snug">
-                                                        <?= e($sch['assistant_1_name']) ?></p>
-                                                    <p
-                                                        class="text-[10px] text-slate-500 font-medium uppercase tracking-wide">
-                                                        Asisten 1</p>
-                                                </div>
-                                            </div>
-                                            <?php endif; ?>
                                         </div>
 
                                         <div
@@ -162,6 +131,12 @@
 
                                     </div>
                                     <?php endforeach; ?>
+                                    
+                                    <!-- Dynamic Empty State (Jika semua jadwal telah selesai/hidden) -->
+                                    <div id="no-upcoming-schedules" class="hidden flex-col items-center justify-center h-64 text-slate-400">
+                                        <i class="bi bi-calendar-check text-4xl mb-3 opacity-50"></i>
+                                        <p class="font-medium">Jadwal kuliah untuk hari ini telah selesai dilaksanakan.</p>
+                                    </div>
                                 </div>
                                 <?php endif; ?>
                             </div>
@@ -169,107 +144,97 @@
 
                     </div>
                 </div>
-                <?php endforeach; ?>
 
             </div>
-
-            <button type="button"
-                class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-prev>
-                <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white text-slate-500 hover:text-sky-600 shadow-sm backdrop-blur-md transition-all">
-                    <i class="bi bi-chevron-left text-xl"></i>
-                </span>
-            </button>
-            <button type="button"
-                class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-next>
-                <span
-                    class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white text-slate-500 hover:text-sky-600 shadow-sm backdrop-blur-md transition-all">
-                    <i class="bi bi-chevron-right text-xl"></i>
-                </span>
-            </button>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full bg-white" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="py-12 bg-white border-b border-slate-100">
     <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-center text-sky-500 font-bold tracking-widest text-sm uppercase mb-10">SUMBER DAYA</h2>
+        <h2 class="text-center text-yellow-600 font-bold tracking-widest text-sm uppercase mb-10">SUMBER DAYA</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div class="group">
                 <div
-                    class="w-16 h-16 mx-auto bg-white rounded-2xl border-2 border-slate-100 shadow-sm flex items-center justify-center text-sky-500 mb-4 group-hover:border-sky-200 group-hover:scale-110 transition-all">
+                    class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
                     <i class="bi bi-motherboard text-3xl"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-800"><?= $stats['labs_count'] ?></h3>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['labs_count'] ?></h3>
                 <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Laboratorium</p>
             </div>
             <div class="group">
                 <div
-                    class="w-16 h-16 mx-auto bg-white rounded-2xl border-2 border-slate-100 shadow-sm flex items-center justify-center text-blue-500 mb-4 group-hover:border-blue-200 group-hover:scale-110 transition-all">
+                    class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
                     <i class="bi bi-mortarboard text-3xl"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-800"><?= $stats['lecturers_count'] ?></h3>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['lecturers_count'] ?></h3>
                 <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Dosen</p>
             </div>
             <div class="group">
                 <div
-                    class="w-16 h-16 mx-auto bg-white rounded-2xl border-2 border-slate-100 shadow-sm flex items-center justify-center text-indigo-500 mb-4 group-hover:border-indigo-200 group-hover:scale-110 transition-all">
+                    class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
                     <i class="bi bi-people text-3xl"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-800"><?= $stats['students_count'] ?></h3>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['students_count'] ?></h3>
                 <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Mahasiswa</p>
             </div>
             <div class="group">
                 <div
-                    class="w-16 h-16 mx-auto bg-white rounded-2xl border-2 border-slate-100 shadow-sm flex items-center justify-center text-cyan-500 mb-4 group-hover:border-cyan-200 group-hover:scale-110 transition-all">
+                    class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
                     <i class="bi bi-person-badge text-3xl"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-slate-800"><?= $stats['assistants_count'] ?></h3>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['assistants_count'] ?></h3>
                 <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Asisten Lab</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="sarana" class="py-20 bg-slate-50 relative overflow-hidden">
+<section id="sarana" class="py-20 bg-white relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
-            <h2 class="text-sky-500 font-bold tracking-widest text-sm uppercase mb-2">FASILITAS LABORATORIUM</h2>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Sarana Penunjang Praktikum</h2>
+            <h2 class="text-yellow-600 font-bold tracking-widest text-sm uppercase mb-2">FASILITAS LABORATORIUM</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-black">Sarana Penunjang Praktikum</h2>
         </div>
 
         <div class="relative">
             <div
-                class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 border-r-4 border-dashed border-slate-300 transform md:-translate-x-1/2 h-full z-0">
+                class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 border-r-4 border-dashed border-brand-yellow/40 transform md:-translate-x-1/2 h-full z-0">
             </div>
 
             <div class="space-y-24">
                 <?php foreach ($labs as $index => $lab): ?>
                 <?php
                     $isEven = ($index % 2 == 0);
-                    if (!empty($lab['image'])) {
-                        $bgImage = (strpos($lab['image'], 'http') === 0) ? $lab['image'] : BASE_URL . '/' . $lab['image'];
-                    } else {
-                        $bgImage = "https://placehold.co/800x500/0ea5e9/ffffff?text=" . urlencode($lab['lab_name']);
-                    }
+                    $staticImages = [
+                        'assets/images/FOTO%20FIKOM_4.jpg',
+                        'assets/images/WORKING%20SPACE_13.png',
+                        'assets/images/PUBLIC%20SPACE%20LUAR.jpg',
+                        'assets/images/photo1701933053.jpeg'
+                    ];
+                    $staticImage = $staticImages[$index % count($staticImages)];
+                    $bgImage = BASE_URL . '/' . $staticImage;
                     ?>
                 <div class="relative flex flex-col md:flex-row items-center justify-between w-full z-10">
                     <div
-                        class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-sky-500 shadow-lg z-20 flex items-center justify-center">
-                        <div class="w-3 h-3 bg-sky-500 rounded-full"></div>
+                        class="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-white border-4 border-brand-yellow shadow-lg z-20 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-brand-black rounded-full"></div>
                     </div>
                     <div
                         class="w-full md:w-[48%] pl-20 md:pl-0 <?= $isEven ? 'md:text-right order-2 md:order-1 pr-0 md:pr-6' : 'order-2 md:order-3 pl-0 md:pl-6' ?>">
-                        <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4"><?= e($lab['lab_name']) ?>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-brand-black mb-4"><?= e($lab['lab_name']) ?>
                         </h3>
                         <p class="text-slate-600 leading-relaxed mb-6">
                             <?= e($lab['description'] ?? 'Laboratorium dengan spesifikasi tinggi.') ?></p>
                         <div class="flex items-center gap-4 justify-start <?= $isEven ? 'md:justify-end' : '' ?>">
                             <div class="text-center group">
                                 <div
-                                    class="w-16 py-2 bg-slate-200 rounded-t-lg text-xl font-black text-slate-800 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                                    class="w-16 py-2 bg-brand-yellow/20 rounded-t-lg text-xl font-black text-brand-black group-hover:bg-brand-yellow transition-colors">
                                     <?= $lab['pc_count'] ?? 0 ?></div>
                                 <div
                                     class="w-16 py-1 bg-slate-100 border-t border-slate-300 rounded-b-lg text-[10px] font-bold text-slate-500 uppercase">
@@ -277,7 +242,7 @@
                             </div>
                             <div class="text-center group">
                                 <div
-                                    class="w-16 py-2 bg-blue-100 rounded-t-lg text-xl font-black text-slate-800 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                    class="w-16 py-2 bg-brand-black/10 rounded-t-lg text-xl font-black text-brand-black group-hover:bg-brand-black group-hover:text-brand-yellow transition-colors">
                                     <?= $lab['tv_count'] ?? 0 ?></div>
                                 <div
                                     class="w-16 py-1 bg-slate-50 border-t border-slate-200 rounded-b-lg text-[10px] font-bold text-slate-500 uppercase">
@@ -305,7 +270,7 @@
     <div class="max-w-6xl mx-auto px-4">
         <a href="<?= url('/activities') ?>" class="block text-center mb-12 group">
             <h2
-                class="text-3xl font-bold text-blue-600 uppercase tracking-wide group-hover:text-blue-700 transition-colors inline-flex items-center gap-2">
+                class="text-3xl font-bold text-yellow-600 uppercase tracking-wide group-hover:text-yellow-700 transition-colors inline-flex items-center gap-2">
                 Kegiatan Terbaru
             </h2>
         </a>
@@ -319,10 +284,10 @@
                     $hasActivities = true;
             ?>
             <article
-                class="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group h-full">
+                class="flex flex-col bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-brand-yellow/10 hover:-translate-y-2 transition-all duration-300 group h-full">
                 <a href="<?= url('/activity/' . $news['id']) ?>" class="relative h-56 overflow-hidden block">
                     <?php
-                            $imageSrc = 'https://placehold.co/600x400/e2e8f0/94a3b8?text=No+Image';
+                            $imageSrc = 'https://placehold.co/600x400/131218/FFC81A?text=No+Image';
                             if (!empty($news['image_cover'])) {
                                 $imageSrc = (strpos($news['image_cover'], 'http') === 0) ? $news['image_cover'] : BASE_URL . $news['image_cover'];
                             }
@@ -333,20 +298,20 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
                     <div class="absolute top-4 left-4 flex gap-2">
                         <span
-                            class="bg-white/90 backdrop-blur-md text-blue-700 text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-sm border border-white/50">
+                            class="bg-brand-yellow text-brand-black text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-wider shadow-sm">
                             <?= getActivityTypeLabel($news['activity_type']) ?>
                         </span>
                     </div>
                 </a>
                 <div class="p-6 flex flex-col flex-1 relative">
                     <div
-                        class="absolute -top-5 right-6 bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-lg shadow-lg flex flex-col items-center border-2 border-white">
+                        class="absolute -top-5 right-6 bg-brand-black text-brand-yellow text-xs font-bold px-3 py-2 rounded-lg shadow-lg flex flex-col items-center border-2 border-white">
                         <span class="text-lg leading-none"><?= date('d', strtotime($news['activity_date'])) ?></span>
                         <span class="uppercase text-[10px]"><?= date('M', strtotime($news['activity_date'])) ?></span>
                     </div>
                     <div class="mt-2 mb-3">
                         <h3
-                            class="text-xl font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors line-clamp-2">
+                            class="text-xl font-bold text-brand-black leading-snug group-hover:text-yellow-600 transition-colors line-clamp-2">
                             <a href="<?= url('/activity/' . $news['id']) ?>"><?= e($news['title']) ?></a>
                         </h3>
                     </div>
@@ -357,7 +322,7 @@
                             <i class="bi bi-clock"></i> <?= date('Y', strtotime($news['activity_date'])) ?>
                         </span>
                         <a href="<?= url('/activity/' . $news['id']) ?>"
-                            class="inline-flex items-center text-blue-600 font-bold text-sm hover:gap-2 gap-1 transition-all group">
+                            class="inline-flex items-center text-yellow-600 font-bold text-sm hover:gap-2 gap-1 transition-all group">
                             Baca Selengkapnya<i
                                 class="bi bi-arrow-right transition-transform group-hover:translate-x-1"></i>
                         </a>
@@ -385,42 +350,50 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const currentTime = now.toTimeString().split(' ')[0];
         const rows = document.querySelectorAll('.schedule-row');
+        let visibleCount = 0;
+        
         rows.forEach(row => {
             const start = row.getAttribute('data-start');
             const end = row.getAttribute('data-end');
             const badge = row.querySelector('.status-badge');
+            
             if (currentTime >= start && currentTime <= end) {
+                row.style.setProperty('display', 'grid', 'important');
                 row.classList.add('bg-blue-50/50', 'border-l-4', 'border-l-blue-500');
-                row.classList.remove('opacity-50', 'grayscale');
                 if (badge) {
-                    // PERBAIKAN: w-fit agar tidak terlalu lebar
                     badge.className =
                         'status-badge px-3 py-1 rounded-full text-[10px] font-bold bg-blue-100 text-blue-700 animate-pulse border border-blue-200 uppercase tracking-wider block w-fit mx-auto';
                     badge.innerHTML = '<i class="bi bi-record-circle-fill mr-1"></i> Berlangsung';
                 }
+                visibleCount++;
             } else if (currentTime > end) {
-                row.classList.remove('bg-blue-50/50', 'border-l-4', 'border-l-blue-500');
-                row.classList.add('opacity-50', 'grayscale');
-                if (badge) {
-                    // PERBAIKAN: w-fit agar tidak terlalu lebar
-                    badge.className =
-                        'status-badge px-3 py-1 rounded-full text-[10px] font-bold bg-slate-200 text-slate-500 border border-slate-300 uppercase tracking-wider block w-fit mx-auto';
-                    badge.textContent = 'Selesai';
-                }
+                // Hide completely
+                row.style.setProperty('display', 'none', 'important');
             } else {
-                row.classList.remove('bg-blue-50/50', 'border-l-4', 'border-l-blue-500', 'opacity-50',
-                    'grayscale');
+                row.style.setProperty('display', 'grid', 'important');
+                row.classList.remove('bg-blue-50/50', 'border-l-4', 'border-l-blue-500');
                 if (badge) {
-                    // PERBAIKAN: w-fit agar tidak terlalu lebar
                     badge.className =
                         'status-badge px-3 py-1 rounded-full text-[10px] font-bold bg-slate-100 text-slate-500 border border-slate-200 shadow-sm uppercase tracking-wider block w-fit mx-auto';
                     badge.textContent = 'Menunggu';
                 }
+                visibleCount++;
             }
         });
+        
+        const emptyState = document.getElementById('no-upcoming-schedules');
+        if (emptyState) {
+            if (visibleCount === 0 && rows.length > 0) {
+                emptyState.classList.remove('hidden');
+                emptyState.classList.add('flex');
+            } else {
+                emptyState.classList.add('hidden');
+                emptyState.classList.remove('flex');
+            }
+        }
     }
     updateScheduleStatus();
-    setInterval(updateScheduleStatus, 60000);
+    setInterval(updateScheduleStatus, 15000); // Check status every 15 seconds
 });
 </script>
 

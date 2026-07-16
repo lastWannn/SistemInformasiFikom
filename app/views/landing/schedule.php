@@ -26,10 +26,10 @@ if ($view == 'lab') {
         return ($dayOrder[$a] ?? 0) - ($dayOrder[$b] ?? 0);
     });
 } else {
-    $groupedSchedules['Semua Jadwal Praktikum'] = $schedules;
+    $groupedSchedules['Semua Jadwal Kuliah'] = $schedules;
 }
 
-$title = 'Jadwal Praktikum';
+$title = 'Jadwal Kuliah';
 ?>
 
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
@@ -41,7 +41,7 @@ $title = 'Jadwal Praktikum';
         <div class="max-w-screen-xl mx-auto px-4">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h1 class="text-3xl font-bold text-slate-900">Jadwal Praktikum</h1>
+                    <h1 class="text-3xl font-bold text-slate-900">Jadwal Kuliah</h1>
                     <p class="text-slate-500 mt-1">
                         Menampilkan <?= count($schedules) ?> dari total <?= $pagination['total_rows'] ?? 0 ?> jadwal.
                     </p>
@@ -124,9 +124,8 @@ $title = 'Jadwal Praktikum';
                     <thead class="text-xs text-slate-700 uppercase bg-slate-50/50">
                         <tr>
                             <th class="px-6 py-3">Waktu & Hari</th>
-                            <th class="px-6 py-3">Mata Kuliah / Kelas</th>
-                            <?php if ($view != 'lab'): ?><th class="px-6 py-3">Laboratorium</th><?php endif; ?>
-                            <th class="px-6 py-3">Dosen & Asisten</th>
+                            <th class="px-6 py-3">Mata Kuliah & Ruangan</th>
+                            <th class="px-6 py-3">Dosen</th>
                             <th class="px-6 py-3 text-center">Aksi</th>
                         </tr>
                     </thead>
@@ -164,37 +163,26 @@ $title = 'Jadwal Praktikum';
                             <td class="px-6 py-4">
                                 <div class="font-bold text-slate-900 text-base">
                                     <?= htmlspecialchars($schedule['course_name'] ?? '-') ?></div>
-                                <div class="flex items-center gap-2 mt-1">
+                                <div class="flex flex-wrap items-center gap-2 mt-1.5">
                                     <span
-                                        class="bg-sky-50 text-sky-700 text-xs px-2 py-0.5 rounded border border-sky-100 font-semibold">
+                                        class="bg-sky-50 text-sky-700 text-xs px-2.5 py-0.5 rounded border border-sky-100 font-semibold">
                                         Kelas <?= htmlspecialchars($schedule['class_code'] ?? '-') ?>
                                     </span>
                                     <span
-                                        class="text-xs text-slate-500"><?= htmlspecialchars($schedule['program_study'] ?? '-') ?></span>
+                                        class="bg-emerald-50 text-emerald-700 text-xs px-2.5 py-0.5 rounded border border-emerald-100 font-semibold flex items-center gap-1">
+                                        <i class="bi bi-geo-alt text-[10px]"></i> <?= htmlspecialchars($schedule['lab_name'] ?? '-') ?>
+                                    </span>
+                                    <span
+                                        class="text-xs text-slate-400 font-medium"><?= htmlspecialchars($schedule['program_study'] ?? '-') ?></span>
                                 </div>
                             </td>
 
-                            <?php if ($view != 'lab'): ?>
-                            <td class="px-6 py-4">
-                                <div class="flex items-center text-slate-700 font-medium">
-                                    <i class="bi bi-geo-alt text-sky-500 mr-2"></i>
-                                    <?= htmlspecialchars($schedule['lab_name'] ?? '-') ?>
-                                </div>
-                                <div class="text-xs text-slate-400 ml-6">
-                                    <?= htmlspecialchars($schedule['location'] ?? '-') ?></div>
-                            </td>
-                            <?php endif; ?>
-
-                            <td class="px-6 py-4">
-                                <div class="text-slate-900 font-medium text-xs mb-1">
-                                    <i class="bi bi-person-video3 mr-1 text-slate-400"></i>
-                                    <?= htmlspecialchars($schedule['lecturer_name'] ?? 'Belum ada dosen') ?>
-                                </div>
-                                <div class="text-slate-500 text-xs">
-                                    <i class="bi bi-people mr-1 text-slate-400"></i> Asisten:
-                                    <?= htmlspecialchars($schedule['assistant_1_name'] ?? '-') ?>
-                                </div>
-                            </td>
+                             <td class="px-6 py-4">
+                                 <div class="text-slate-900 font-medium text-xs">
+                                     <i class="bi bi-person-video3 mr-1 text-slate-400"></i>
+                                     <?= htmlspecialchars($schedule['lecturer_name'] ?? 'Belum ada dosen') ?>
+                                 </div>
+                             </td>
                             <td class="px-6 py-4 text-center">
                                 <a href="<?= url('/schedule/' . ($schedule['id'] ?? 0)) ?>"
                                     class="text-sky-600 bg-sky-50 hover:bg-sky-100 focus:ring-4 focus:ring-sky-100 font-medium rounded-lg text-xs px-4 py-2 focus:outline-none transition-all">

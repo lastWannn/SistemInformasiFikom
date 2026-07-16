@@ -8,7 +8,7 @@
     <title><?= $title ?></title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?= BASE_URL ?>/assets/images/logo-iclabs.png">
+    <link rel="icon" type="image/png" href="<?= BASE_URL ?>/assets/images/LogoFikom_kuning.png">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -128,7 +128,7 @@
             <div class="w-full max-w-md space-y-8">
 
                 <div class="text-center">
-                    <img src="<?= BASE_URL ?>/assets/images/logo-iclabs.png" alt="ICLABS" class="h-16 mx-auto mb-6"
+                    <img src="<?= BASE_URL ?>/assets/images/LogoFikom_kuning.png" alt="FIKOM UMI" class="h-16 mx-auto mb-6"
                         onerror="this.src='https://cdn-icons-png.flaticon.com/512/2083/2083213.png'">
                     <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Selamat Datang</h1>
                     <p class="text-slate-500 mt-2">Silakan login untuk mengakses portal laboratorium.</p>

@@ -131,7 +131,7 @@ $adminLayout = true; ?>
             <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
                 <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
                     <div>
-                        <h3 class="font-bold text-slate-800 text-lg">Jadwal Praktikum Hari Ini</h3>
+                        <h3 class="font-bold text-slate-800 text-lg">Jadwal Kuliah Hari Ini</h3>
                         <p class="text-xs text-slate-500 mt-1">Daftar sesi yang dijadwalkan untuk <?= date('d F Y') ?>
                         </p>
                     </div>
@@ -200,7 +200,7 @@ $adminLayout = true; ?>
                             <tr>
                                 <td colspan="5" class="px-6 py-12 text-center text-slate-400">
                                     <i class="bi bi-calendar-x text-3xl mb-2 block"></i>
-                                    Tidak ada jadwal praktikum hari ini.
+                                    Tidak ada jadwal kuliah hari ini.
                                 </td>
                             </tr>
                             <?php endif; ?>

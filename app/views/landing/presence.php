@@ -1,5 +1,5 @@
 <?php
-$title = 'Tim Laboratorium';
+$title = 'Struktur Senat';
 
 // LOGIC: Memisahkan Kepala Lab dan Staff berdasarkan Kategori Database
 $leaders = [];
@@ -37,13 +37,13 @@ if (!empty($presenceList)) {
     <div class="bg-white border-b border-slate-200 pt-16 pb-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <span class="inline-block py-1 px-3 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider mb-4 border border-blue-100">
-                Kontak & Kehadiran
+                Struktur Organisasi
             </span>
             <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
-                Tim Laboratorium
+                Struktur Senat
             </h1>
             <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                Pantau ketersediaan Kepala Laboratorium dan Staff Laboran secara real-time.
+                Daftar Pengurus dan Anggota Senat Fakultas Ilmu Komputer.
             </p>
         </div>
     </div>
@@ -53,7 +53,7 @@ if (!empty($presenceList)) {
         <div class="mb-12 md:mb-16">
             <div class="flex items-center justify-center mb-6 md:mb-8">
                 <span class="h-px w-8 md:w-12 bg-slate-300"></span>
-                <h2 class="px-4 text-sm md:text-lg font-bold text-slate-400 uppercase tracking-widest text-center">Kepala Laboratorium</h2>
+                <h2 class="px-4 text-sm md:text-lg font-bold text-slate-400 uppercase tracking-widest text-center">Pimpinan Senat</h2>
                 <span class="h-px w-8 md:w-12 bg-slate-300"></span>
             </div>
 
@@ -68,7 +68,7 @@ if (!empty($presenceList)) {
                     <div class="w-full px-4">
                         <div class="text-center text-slate-400 italic py-10 bg-white rounded-xl border border-dashed border-slate-300">
                             <i class="bi bi-people text-2xl mb-2 block"></i>
-                            Data Kepala Lab belum diinput oleh Admin.
+                            Data Pimpinan Senat belum diinput oleh Admin.
                         </div>
                     </div>
                 <?php endif; ?>
@@ -78,7 +78,7 @@ if (!empty($presenceList)) {
         <div>
             <div class="flex items-center justify-center mb-6 md:mb-8">
                 <span class="h-px w-8 md:w-12 bg-slate-300"></span>
-                <h2 class="px-4 text-sm md:text-lg font-bold text-slate-400 uppercase tracking-widest text-center">Staff & Laboran</h2>
+                <h2 class="px-4 text-sm md:text-lg font-bold text-slate-400 uppercase tracking-widest text-center">Anggota Senat</h2>
                 <span class="h-px w-8 md:w-12 bg-slate-300"></span>
             </div>
 
@@ -93,7 +93,7 @@ if (!empty($presenceList)) {
                     <div class="w-full px-4">
                         <div class="text-center text-slate-400 italic py-10 bg-white rounded-xl border border-dashed border-slate-300">
                             <i class="bi bi-person-badge text-2xl mb-2 block"></i>
-                            Data Staff belum diinput oleh Admin.
+                            Data Anggota Senat belum diinput oleh Admin.
                         </div>
                     </div>
                 <?php endif; ?>
