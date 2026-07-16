@@ -162,15 +162,23 @@
             <div class="group">
                 <div
                     class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
-                    <i class="bi bi-motherboard text-3xl"></i>
+                    <i class="bi bi-mortarboard text-3xl"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['labs_count'] ?></h3>
-                <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Laboratorium</p>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['students_count'] ?></h3>
+                <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Mahasiswa</p>
             </div>
             <div class="group">
                 <div
                     class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
-                    <i class="bi bi-mortarboard text-3xl"></i>
+                    <i class="bi bi-award text-3xl"></i>
+                </div>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['alumni_count'] ?></h3>
+                <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Alumni<br><span class="text-[9px] text-slate-400 font-medium normal-case">(2018 - 2023)</span></p>
+            </div>
+            <div class="group">
+                <div
+                    class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
+                    <i class="bi bi-person-workspace text-3xl"></i>
                 </div>
                 <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['lecturers_count'] ?></h3>
                 <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Dosen</p>
@@ -180,16 +188,8 @@
                     class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
                     <i class="bi bi-people text-3xl"></i>
                 </div>
-                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['students_count'] ?></h3>
-                <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Mahasiswa</p>
-            </div>
-            <div class="group">
-                <div
-                    class="w-16 h-16 mx-auto bg-yellow-50 rounded-2xl border-2 border-brand-yellow/30 shadow-sm flex items-center justify-center text-yellow-600 mb-4 group-hover:bg-brand-yellow group-hover:text-brand-black group-hover:scale-110 transition-all">
-                    <i class="bi bi-person-badge text-3xl"></i>
-                </div>
-                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['assistants_count'] ?></h3>
-                <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Asisten Lab</p>
+                <h3 class="text-3xl font-extrabold text-brand-black"><?= $stats['staff_count'] ?></h3>
+                <p class="text-xs text-slate-500 font-bold uppercase mt-1 tracking-wide">Staff</p>
             </div>
         </div>
     </div>

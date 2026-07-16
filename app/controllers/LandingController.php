@@ -10,10 +10,10 @@ class LandingController extends Controller
 
         // 1. Data Statistik (Dashboard)
         $stats = [
-            'labs_count' => $labModel->countLaboratories(),
-            'assistants_count' => $userModel->countByRole(3),
-            'lecturers_count' => 31,
-            'students_count' => '300+'
+            'students_count' => '1.450',
+            'alumni_count' => '2.878',
+            'lecturers_count' => '40',
+            'staff_count' => '23'
         ];
 
         // 2. LOGIKA CAROUSEL (Slide 1: Banner, Slide 2: Jadwal Hari Ini)
