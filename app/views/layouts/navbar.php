@@ -117,12 +117,7 @@
 
                     <?php if ($role == 'koordinator'): ?>
                         <li class="hidden md:block w-px h-5 bg-slate-300 mx-2"></li>
-                        <li>
-                            <a href="<?= url('/koordinator/assistant-schedules') ?>"
-                                class="block py-2 px-3 rounded md:p-0 transition-colors <?= strpos($_SERVER['REQUEST_URI'] ?? '', '/koordinator/assistant-schedules') !== false ? 'text-amber-600 font-bold' : 'text-amber-600 hover:text-amber-700 font-medium' ?>">
-                                Piket
-                            </a>
-                        </li>
+
                         <li>
                             <a href="<?= url('/koordinator/laboratories') ?>"
                                 class="block py-2 px-3 rounded md:p-0 transition-colors <?= strpos($_SERVER['REQUEST_URI'] ?? '', '/koordinator/laboratories') !== false ? 'text-amber-600 font-bold' : 'text-amber-600 hover:text-amber-700 font-medium' ?>">
@@ -158,12 +153,7 @@
                                 Masalah Lab
                             </a>
                         </li>
-                        <li>
-                            <a href="<?= url('/asisten/assistant-schedules') ?>"
-                                class="block py-2 px-3 rounded md:p-0 transition-colors <?= strpos($_SERVER['REQUEST_URI'] ?? '', '/assistant-schedules') !== false ? 'text-emerald-600 font-bold' : 'text-slate-600 hover:text-emerald-600' ?>">
-                                Jadwal Piket
-                            </a>
-                        </li>
+
                     <?php endif; ?>
 
                     <?php if ($role == 'admin'): ?>

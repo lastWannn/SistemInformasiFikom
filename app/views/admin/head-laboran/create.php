@@ -1,7 +1,7 @@
 <?php $title = 'Tambah Staff'; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 
-<div class="antialiased bg-slate-50 min-h-screen">
+<div class="antialiased bg-transparent min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -9,13 +9,13 @@
 
             <div class="flex items-center gap-4 mb-8">
                 <a href="<?= url('/admin/head-laboran') ?>"
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-primary-600 hover:border-primary-200 shadow-sm transition-all"
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1c1b22] border border-white/10 text-slate-400 hover:text-primary-500 hover:border-primary-500 shadow-sm transition-all"
                     title="Kembali">
                     <i class="bi bi-arrow-left text-lg"></i>
                 </a>
                 <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-slate-900">Tambah Staff Baru</h1>
-                    <p class="text-slate-500 text-sm mt-1">Daftarkan user sebagai staff atau kepala laboratorium.</p>
+                    <h1 class="text-2xl font-bold tracking-tight text-white">Tambah Staff Baru</h1>
+                    <p class="text-slate-400 text-sm mt-1">Daftarkan user sebagai staff atau kepala laboratorium.</p>
                 </div>
             </div>
 
@@ -26,24 +26,24 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                     <div class="lg:col-span-1 space-y-6">
-                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                        <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 p-6">
                             <h2
-                                class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6 pb-2 border-b border-slate-100">
+                                class="text-sm font-bold text-white uppercase tracking-wider mb-6 pb-2 border-b border-white/10">
                                 Identitas Staff
                             </h2>
 
                             <div class="mb-6 flex flex-col items-center">
                                 <label class="relative group cursor-pointer">
                                     <div
-                                        class="w-32 h-32 rounded-full border-4 border-slate-50 shadow-md overflow-hidden bg-slate-100 relative flex items-center justify-center">
+                                        class="w-32 h-32 rounded-full border-4 border-[#131218] shadow-md overflow-hidden bg-[#131218] relative flex items-center justify-center">
                                         <img id="photo-preview" class="hidden w-full h-full object-cover">
-                                        <div id="photo-placeholder" class="text-slate-300 flex flex-col items-center">
+                                        <div id="photo-placeholder" class="text-slate-400 flex flex-col items-center">
                                             <i class="bi bi-person-plus-fill text-4xl mb-1"></i>
                                             <span class="text-[10px] uppercase font-bold">Upload</span>
                                         </div>
                                     </div>
                                     <div
-                                        class="absolute bottom-0 right-0 w-8 h-8 bg-primary-600 text-white rounded-full shadow border-2 border-white flex items-center justify-center group-hover:bg-primary-700 transition-colors">
+                                        class="absolute bottom-0 right-0 w-8 h-8 bg-primary-500 text-[#131218] rounded-full shadow border-2 border-[#1c1b22] flex items-center justify-center group-hover:bg-primary-600 transition-colors">
                                         <i class="bi bi-camera-fill text-xs"></i>
                                     </div>
                                     <input type="file" name="photo_file" id="photo_file" class="hidden" accept="image/*"
@@ -54,11 +54,11 @@
 
                             <div class="space-y-4">
                                 <div>
-                                    <label class="block mb-2 text-xs font-semibold text-slate-700 uppercase">Pilih User
+                                    <label class="block mb-2 text-xs font-semibold text-white uppercase">Pilih User
                                         <span class="text-rose-500">*</span></label>
                                     <div class="relative">
                                         <select name="user_id"
-                                            class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block appearance-none"
+                                            class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block appearance-none"
                                             required>
                                             <option value="">-- Pilih Akun User --</option>
                                             <?php foreach ($users as $user): ?>
@@ -67,7 +67,7 @@
                                             <?php endforeach; ?>
                                         </select>
                                         <div
-                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-500">
+                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
                                             <i class="bi bi-chevron-down text-xs"></i>
                                         </div>
                                     </div>
@@ -75,13 +75,13 @@
 
 
                                 <div>
-                                    <label class="block mb-2 text-xs font-semibold text-slate-700 uppercase">Kategori
+                                    <label class="block mb-2 text-xs font-semibold text-white uppercase">Kategori
                                         Jabatan <span class="text-rose-500">*</span></label>
                                     <div class="grid grid-cols-2 gap-4">
                                         <label class="cursor-pointer">
                                             <input type="radio" name="category" value="head" class="peer sr-only">
                                             <div
-                                                class="p-3 rounded-xl border border-slate-200 bg-slate-50 peer-checked:bg-primary-50 peer-checked:border-primary-500 peer-checked:text-primary-700 transition-all text-center">
+                                                class="p-3 rounded-xl border border-white/10 bg-[#131218] text-slate-400 peer-checked:bg-primary-500/10 peer-checked:border-primary-500 peer-checked:text-primary-400 transition-all text-center">
                                                 <i class="bi bi-star-fill mb-1 block text-lg"></i>
                                                 <span class="text-sm font-bold">Kepala Lab</span>
                                             </div>
@@ -90,7 +90,7 @@
                                             <input type="radio" name="category" value="staff" class="peer sr-only"
                                                 checked>
                                             <div
-                                                class="p-3 rounded-xl border border-slate-200 bg-slate-50 peer-checked:bg-slate-200 peer-checked:border-slate-400 peer-checked:text-slate-800 transition-all text-center">
+                                                class="p-3 rounded-xl border border-white/10 bg-[#131218] text-slate-400 peer-checked:bg-white/10 peer-checked:border-slate-500 peer-checked:text-white transition-all text-center">
                                                 <i class="bi bi-people-fill mb-1 block text-lg"></i>
                                                 <span class="text-sm font-bold">Staff / Laboran</span>
                                             </div>
@@ -99,23 +99,23 @@
                                 </div>
 
                                 <div class="mt-4">
-                                    <label class="block mb-2 text-xs font-semibold text-slate-700 uppercase">Nama
+                                    <label class="block mb-2 text-xs font-semibold text-white uppercase">Nama
                                         Jabatan Spesifik <span class="text-rose-500">*</span></label>
                                     <input type="text" name="position"
-                                        class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all"
+                                        class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all placeholder-slate-500"
                                         placeholder="Contoh: Kepala Lab Multimedia" required>
                                 </div>
 
                                 <div>
-                                    <label class="block mb-2 text-xs font-semibold text-slate-700 uppercase">No.
+                                    <label class="block mb-2 text-xs font-semibold text-white uppercase">No.
                                         WhatsApp</label>
                                     <div class="relative">
                                         <div
-                                            class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none text-slate-400 font-bold border-r border-slate-200 pr-3 mr-1">
+                                            class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none text-slate-400 font-bold border-r border-white/10 pr-3 mr-1">
                                             +62
                                         </div>
                                         <input type="number" name="phone"
-                                            class="w-full ps-16 p-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all placeholder:text-slate-400"
+                                            class="w-full ps-16 p-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all placeholder:text-slate-400"
                                             placeholder="81234567890">
                                     </div>
                                 </div>
@@ -124,28 +124,28 @@
                     </div>
 
                     <div class="lg:col-span-2 space-y-6">
-                        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                        <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 p-6">
                             <h2
-                                class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6 pb-2 border-b border-slate-100 flex items-center gap-2">
+                                class="text-sm font-bold text-white uppercase tracking-wider mb-6 pb-2 border-b border-white/10 flex items-center gap-2">
                                 <i class="bi bi-toggle-on text-primary-500"></i> Status Kehadiran Awal
                             </h2>
 
                             <div class="mb-6">
-                                <label class="block mb-2 text-sm font-semibold text-slate-700">Set Status Awal <span
+                                <label class="block mb-2 text-sm font-semibold text-white">Set Status Awal <span
                                         class="text-rose-500">*</span></label>
                                 <div class="grid grid-cols-2 gap-4">
                                     <label
-                                        class="group relative flex items-center justify-between p-4 bg-white border rounded-xl cursor-pointer hover:bg-slate-50 transition-all focus-within:ring-2 focus-within:ring-emerald-500 border-slate-200 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-50/30 has-[:checked]:ring-1 has-[:checked]:ring-emerald-500">
+                                        class="group relative flex items-center justify-between p-4 bg-[#131218] border rounded-xl cursor-pointer hover:bg-white/5 transition-all focus-within:ring-2 focus-within:ring-emerald-500 border-white/10 has-[:checked]:border-emerald-500 has-[:checked]:bg-emerald-500/10 has-[:checked]:ring-1 has-[:checked]:ring-emerald-500">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="flex items-center justify-center w-5 h-5 border-2 rounded-full border-slate-300 group-has-[:checked]:border-emerald-500">
+                                                class="flex items-center justify-center w-5 h-5 border-2 rounded-full border-slate-500 group-has-[:checked]:border-emerald-500">
                                                 <div
                                                     class="w-2.5 h-2.5 rounded-full bg-emerald-500 hidden group-has-[:checked]:block">
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="block text-sm font-bold text-slate-800">Active</span>
-                                                <span class="block text-xs text-slate-500">Hadir / Standby</span>
+                                                <span class="block text-sm font-bold text-white">Active</span>
+                                                <span class="block text-xs text-slate-400">Hadir / Standby</span>
                                             </div>
                                         </div>
                                         <input type="radio" name="status" value="active" class="hidden" checked
@@ -153,17 +153,17 @@
                                     </label>
 
                                     <label
-                                        class="group relative flex items-center justify-between p-4 bg-white border rounded-xl cursor-pointer hover:bg-slate-50 transition-all focus-within:ring-2 focus-within:ring-rose-500 border-slate-200 has-[:checked]:border-rose-500 has-[:checked]:bg-rose-50/30 has-[:checked]:ring-1 has-[:checked]:ring-rose-500">
+                                        class="group relative flex items-center justify-between p-4 bg-[#131218] border rounded-xl cursor-pointer hover:bg-white/5 transition-all focus-within:ring-2 focus-within:ring-rose-500 border-white/10 has-[:checked]:border-rose-500 has-[:checked]:bg-rose-500/10 has-[:checked]:ring-1 has-[:checked]:ring-rose-500">
                                         <div class="flex items-center gap-3">
                                             <div
-                                                class="flex items-center justify-center w-5 h-5 border-2 rounded-full border-slate-300 group-has-[:checked]:border-rose-500">
+                                                class="flex items-center justify-center w-5 h-5 border-2 rounded-full border-slate-500 group-has-[:checked]:border-rose-500">
                                                 <div
                                                     class="w-2.5 h-2.5 rounded-full bg-rose-500 hidden group-has-[:checked]:block">
                                                 </div>
                                             </div>
                                             <div>
-                                                <span class="block text-sm font-bold text-slate-800">Inactive</span>
-                                                <span class="block text-xs text-slate-500">Keluar / Izin</span>
+                                                <span class="block text-sm font-bold text-white">Inactive</span>
+                                                <span class="block text-xs text-slate-400">Keluar / Izin</span>
                                             </div>
                                         </div>
                                         <input type="radio" name="status" value="inactive" class="hidden"
@@ -174,43 +174,43 @@
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Lokasi Awal</label>
+                                    <label class="block mb-2 text-sm font-semibold text-white">Lokasi Awal</label>
                                     <div class="relative">
                                         <div
                                             class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none text-slate-400">
                                             <i class="bi bi-geo-alt"></i>
                                         </div>
                                         <input type="text" name="location"
-                                            class="w-full ps-10 p-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all"
+                                            class="w-full ps-10 p-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all placeholder-slate-500"
                                             placeholder="Contoh: Lab Komputer 1">
                                     </div>
                                 </div>
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Jam Masuk</label>
+                                    <label class="block mb-2 text-sm font-semibold text-white">Jam Masuk</label>
                                     <input type="time" name="time_in"
-                                        class="w-full p-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all">
+                                        class="w-full p-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all">
                                 </div>
                             </div>
 
                             <div class="mb-6">
-                                <label class="block mb-2 text-sm font-semibold text-slate-700">Catatan /
+                                <label class="block mb-2 text-sm font-semibold text-white">Catatan /
                                     Keterangan</label>
                                 <textarea name="notes" rows="3"
-                                    class="w-full p-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all resize-none"
+                                    class="w-full p-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all resize-none placeholder-slate-500"
                                     placeholder="Tambahkan catatan awal (Opsional)..."></textarea>
                             </div>
 
                             <div id="return-time-container"
                                 class="transition-all duration-300 opacity-50 grayscale pointer-events-none">
-                                <div class="p-4 bg-rose-50 rounded-xl border border-rose-100">
-                                    <div class="flex items-center gap-2 mb-2 text-rose-700">
+                                <div class="p-4 bg-rose-500/10 rounded-xl border border-rose-500/20">
+                                    <div class="flex items-center gap-2 mb-2 text-rose-400">
                                         <i class="bi bi-clock-history"></i>
                                         <label class="text-sm font-bold">Estimasi Kembali</label>
                                     </div>
-                                    <p class="text-xs text-rose-600/70 mb-3">Wajib diisi jika memilih status "Inactive".
+                                    <p class="text-xs text-rose-500/70 mb-3">Wajib diisi jika memilih status "Inactive".
                                     </p>
                                     <input type="datetime-local" name="return_time"
-                                        class="bg-white border border-rose-200 text-slate-900 text-sm rounded-lg block w-full p-2.5 focus:border-rose-500 focus:ring-rose-200">
+                                        class="bg-[#131218] border border-rose-500/30 text-white text-sm rounded-lg block w-full p-2.5 focus:border-rose-500 focus:ring-rose-500/20">
                                 </div>
                             </div>
 
@@ -218,12 +218,12 @@
 
                         <div class="flex items-center gap-4 pt-4">
                             <button type="submit"
-                                class="flex-1 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-xl text-sm px-5 py-3 transition-all shadow-lg shadow-primary-500/30 flex justify-center items-center gap-2">
+                                class="flex-1 text-[#131218] bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:ring-primary-500/20 font-bold rounded-xl text-sm px-5 py-3 transition-all shadow-lg shadow-primary-500/30 flex justify-center items-center gap-2">
                                 <i class="bi bi-person-check-fill"></i>
                                 Tambah Staff
                             </button>
                             <a href="<?= url('/admin/head-laboran') ?>"
-                                class="text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:text-slate-900 font-medium rounded-xl text-sm px-6 py-3 transition-all">
+                                class="text-slate-400 bg-[#1c1b22] border border-white/10 hover:bg-white/5 hover:text-white font-medium rounded-xl text-sm px-6 py-3 transition-all">
                                 Batal
                             </a>
                         </div>

@@ -11,26 +11,32 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <?php 
+    $uri = $_SERVER['REQUEST_URI'] ?? '';
+    $isAdminRoute = strpos($uri, '/admin') !== false;
+    $isDarkTheme = (isset($adminLayout) && $adminLayout) || $isAdminRoute; 
+    ?>
+
     <script>
+        <?php if ($isDarkTheme): ?>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        // Warna Utama: Sky Blue (Biru Langit)
                         primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9', // Warna Utama (Primary)
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#FFC81A', // Aksen Kuning Custom (Warna Utama Admin)
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
                         },
-                        secondary: '#64748b', // Slate Grey untuk teks
+                        secondary: '#64748b',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -38,6 +44,33 @@
                 }
             }
         }
+        <?php else: ?>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9', // Warna Utama (Biru Langit)
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        secondary: '#64748b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+        <?php endif; ?>
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -157,4 +190,9 @@
     </script>
 </head>
 
-<body class="bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-200 selection:text-sky-900">
+<?php 
+$bodyClasses = $isDarkTheme 
+    ? 'bg-[#131218] text-slate-300 flex flex-col min-h-screen selection:bg-[#FFC81A]/30 selection:text-[#FFC81A]'
+    : 'bg-white text-slate-800 flex flex-col min-h-screen selection:bg-sky-200 selection:text-sky-900';
+?>
+<body class="<?= $bodyClasses ?>">

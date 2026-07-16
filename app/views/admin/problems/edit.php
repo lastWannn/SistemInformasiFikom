@@ -1,7 +1,7 @@
 <?php $title = 'Edit Masalah'; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 
-<div class="antialiased bg-slate-50 min-h-screen">
+<div class="antialiased bg-[#131218] min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -9,26 +9,26 @@
 
             <div class="flex items-center gap-4 mb-8">
                 <a href="<?= url('/admin/problems/' . $problem['id']) ?>"
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-primary-600 shadow-sm transition-all">
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1c1b22] border border-white/10 text-slate-400 hover:text-primary-600 shadow-sm transition-all">
                     <i class="bi bi-arrow-left text-lg"></i>
                 </a>
                 <div>
-                    <h1 class="text-2xl font-bold text-slate-900">Edit Laporan #<?= $problem['id'] ?></h1>
-                    <p class="text-slate-500 text-sm">Perbarui informasi detail masalah.</p>
+                    <h1 class="text-2xl font-bold text-white">Edit Laporan #<?= $problem['id'] ?></h1>
+                    <p class="text-slate-400 text-sm">Perbarui informasi detail masalah.</p>
                 </div>
             </div>
 
             <?php displayFlash(); ?>
 
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 p-8">
                 <form action="<?= url('/admin/problems/' . $problem['id'] . '/edit') ?>" method="POST">
                     <div class="space-y-6">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block mb-2 text-sm font-bold text-slate-700">Laboratorium</label>
+                                <label class="block mb-2 text-sm font-bold text-slate-300">Laboratorium</label>
                                 <select name="laboratory_id"
-                                    class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                    class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-100"
                                     required>
                                     <?php foreach ($laboratories as $lab): ?>
                                     <option value="<?= $lab['id'] ?>"
@@ -39,17 +39,17 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block mb-2 text-sm font-bold text-slate-700">Nomor PC</label>
+                                <label class="block mb-2 text-sm font-bold text-slate-300">Nomor PC</label>
                                 <input type="text" name="pc_number" value="<?= e($problem['pc_number']) ?>"
-                                    class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                    class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-100"
                                     required>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block mb-2 text-sm font-bold text-slate-700">Kategori Masalah</label>
+                            <label class="block mb-2 text-sm font-bold text-slate-300">Kategori Masalah</label>
                             <select name="problem_type"
-                                class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100">
+                                class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-100">
                                 <option value="hardware"
                                     <?= $problem['problem_type'] == 'hardware' ? 'selected' : '' ?>>Hardware</option>
                                 <option value="software"
@@ -62,19 +62,19 @@
                         </div>
 
                         <div>
-                            <label class="block mb-2 text-sm font-bold text-slate-700">Deskripsi Masalah</label>
+                            <label class="block mb-2 text-sm font-bold text-slate-300">Deskripsi Masalah</label>
                             <textarea name="description" rows="4"
-                                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-100"
                                 required><?= e($problem['description']) ?></textarea>
                         </div>
 
-                        <div class="pt-4 border-t border-slate-100 flex gap-3">
+                        <div class="pt-4 border-t border-white/5 flex gap-3">
                             <button type="submit"
                                 class="flex-1 bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-amber-500/30">
                                 Update Data
                             </button>
                             <a href="<?= url('/admin/problems/' . $problem['id']) ?>"
-                                class="flex-1 bg-white border border-slate-200 text-slate-700 font-bold py-3 rounded-xl hover:bg-slate-50 text-center transition-all">
+                                class="flex-1 bg-[#1c1b22] border border-white/10 text-slate-300 font-bold py-3 rounded-xl hover:bg-[#131218] text-center transition-all">
                                 Batal
                             </a>
                         </div>

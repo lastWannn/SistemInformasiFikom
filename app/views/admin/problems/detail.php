@@ -1,7 +1,7 @@
 <?php $title = 'Detail Masalah'; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 
-<div class="antialiased bg-slate-50 min-h-screen">
+<div class="antialiased bg-[#131218] min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -9,21 +9,21 @@
 
             <div class="flex items-center gap-4 mb-6">
                 <a href="<?= url('/admin/problems') ?>"
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-primary-600 hover:border-primary-200 shadow-sm transition-all"
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1c1b22] border border-white/10 text-slate-400 hover:text-primary-600 hover:border-primary-200 shadow-sm transition-all"
                     title="Kembali ke Daftar">
                     <i class="bi bi-arrow-left text-lg"></i>
                 </a>
                 <div class="flex-1">
-                    <div class="flex items-center gap-2 text-sm text-slate-500 mb-1">
+                    <div class="flex items-center gap-2 text-sm text-slate-400 mb-1">
                         <span>Reports</span>
                         <i class="bi bi-chevron-right text-xs"></i>
                         <span class="font-mono">#<?= $problem['id'] ?></span>
                     </div>
-                    <h1 class="text-2xl font-bold tracking-tight text-slate-900">Detail Masalah</h1>
+                    <h1 class="text-2xl font-bold tracking-tight text-white">Detail Masalah</h1>
                 </div>
 
                 <a href="<?= url('/admin/problems/' . $problem['id'] . '/edit') ?>"
-                    class="px-4 py-2 bg-white border border-slate-200 text-slate-700 font-bold rounded-lg hover:text-amber-600 hover:border-amber-200 shadow-sm transition-all flex items-center gap-2">
+                    class="px-4 py-2 bg-[#1c1b22] border border-white/10 text-slate-300 font-bold rounded-lg hover:text-amber-600 hover:border-amber-200 shadow-sm transition-all flex items-center gap-2">
                     <i class="bi bi-pencil-square"></i>
                     <span class="hidden sm:inline">Edit Data</span>
                 </a>
@@ -33,7 +33,7 @@
                     'reported' => 'bg-rose-100 text-rose-700 border-rose-200',
                     'in_progress' => 'bg-amber-100 text-amber-700 border-amber-200',
                     'resolved' => 'bg-emerald-100 text-emerald-700 border-emerald-200',
-                    default => 'bg-slate-100 text-slate-700'
+                    default => 'bg-slate-100 text-slate-300'
                 };
                 $statusIcon = match ($problem['status']) {
                     'reported' => 'bi-exclamation-circle-fill',
@@ -55,10 +55,10 @@
 
                 <div class="lg:col-span-2 space-y-6">
 
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 overflow-hidden">
                         <div
-                            class="px-6 py-4 border-b border-slate-100 bg-slate-50/50 flex justify-between items-center">
-                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                            class="px-6 py-4 border-b border-white/5 bg-[#131218]/50 flex justify-between items-center">
+                            <h3 class="font-bold text-slate-200 flex items-center gap-2">
                                 <i class="bi bi-info-circle text-primary-500"></i> Informasi Masalah
                             </h3>
                             <span class="text-xs text-slate-400">
@@ -68,34 +68,34 @@
 
                         <div class="p-6 space-y-6">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <div class="p-4 bg-[#131218] rounded-xl border border-white/5">
                                     <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Perangkat
                                         Terdampak</p>
                                     <div class="flex items-center gap-3">
                                         <div
-                                            class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-primary-600 shadow-sm">
+                                            class="w-10 h-10 rounded-lg bg-[#1c1b22] border border-white/10 flex items-center justify-center text-primary-600 shadow-sm">
                                             <i class="bi bi-pc-display text-xl"></i>
                                         </div>
                                         <div>
-                                            <p class="font-bold text-slate-800"><?= e($problem['lab_name']) ?></p>
-                                            <p class="text-xs text-slate-500 font-mono">
+                                            <p class="font-bold text-slate-200"><?= e($problem['lab_name']) ?></p>
+                                            <p class="text-xs text-slate-400 font-mono">
                                                 PC-<?= e($problem['pc_number']) ?></p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                                <div class="p-4 bg-[#131218] rounded-xl border border-white/5">
                                     <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Kategori
                                     </p>
                                     <div class="flex items-center gap-3">
                                         <div
-                                            class="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-violet-600 shadow-sm">
+                                            class="w-10 h-10 rounded-lg bg-[#1c1b22] border border-white/10 flex items-center justify-center text-violet-600 shadow-sm">
                                             <i class="bi bi-tags text-xl"></i>
                                         </div>
                                         <div>
-                                            <p class="font-bold text-slate-800"><?= ucfirst($problem['problem_type']) ?>
+                                            <p class="font-bold text-slate-200"><?= ucfirst($problem['problem_type']) ?>
                                             </p>
-                                            <p class="text-xs text-slate-500">Jenis Kerusakan</p>
+                                            <p class="text-xs text-slate-400">Jenis Kerusakan</p>
                                         </div>
                                     </div>
                                 </div>
@@ -104,20 +104,20 @@
                             <div>
                                 <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Deskripsi</p>
                                 <div
-                                    class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-slate-700 leading-relaxed text-sm">
+                                    class="bg-[#131218] rounded-xl p-4 border border-white/5 text-slate-300 leading-relaxed text-sm">
                                     <?= nl2br(e($problem['description'])) ?>
                                 </div>
                             </div>
 
-                            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                            <div class="flex items-center gap-3 pt-4 border-t border-white/5">
                                 <div
-                                    class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600">
+                                    class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-400">
                                     <?= strtoupper(substr($problem['reporter_name'], 0, 1)) ?>
                                 </div>
                                 <div class="text-sm">
-                                    <span class="text-slate-500">Dilaporkan oleh</span>
+                                    <span class="text-slate-400">Dilaporkan oleh</span>
                                     <span
-                                        class="font-bold text-slate-800 ml-1"><?= e($problem['reporter_name']) ?></span>
+                                        class="font-bold text-slate-200 ml-1"><?= e($problem['reporter_name']) ?></span>
                                     <span class="text-slate-400 mx-1">&bull;</span>
                                     <span class="text-slate-400"><?= e($problem['reporter_email']) ?></span>
                                 </div>
@@ -125,16 +125,16 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                        <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/50">
-                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 overflow-hidden">
+                        <div class="px-6 py-4 border-b border-white/5 bg-[#131218]/50">
+                            <h3 class="font-bold text-slate-200 flex items-center gap-2">
                                 <i class="bi bi-clock-history text-primary-500"></i> Riwayat Perbaikan
                             </h3>
                         </div>
 
                         <div class="p-6">
                             <?php if (!empty($histories)): ?>
-                            <div class="relative pl-4 border-l-2 border-slate-100 space-y-8">
+                            <div class="relative pl-4 border-l-2 border-white/5 space-y-8">
                                 <?php foreach ($histories as $history): ?>
                                 <div class="relative">
                                     <div
@@ -143,10 +143,10 @@
                                     </div>
 
                                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 mb-1">
-                                        <div class="font-bold text-slate-800 text-sm">
+                                        <div class="font-bold text-slate-200 text-sm">
                                             Status berubah:
                                             <span
-                                                class="<?= $history['status'] == 'resolved' ? 'text-emerald-600' : 'text-slate-600' ?>">
+                                                class="<?= $history['status'] == 'resolved' ? 'text-emerald-600' : 'text-slate-400' ?>">
                                                 <?= ucfirst(str_replace('_', ' ', $history['status'])) ?>
                                             </span>
                                         </div>
@@ -157,7 +157,7 @@
 
                                     <?php if (!empty($history['note'])): ?>
                                     <div
-                                        class="text-sm text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-100 mt-2">
+                                        class="text-sm text-slate-400 bg-[#131218] p-3 rounded-lg border border-white/5 mt-2">
                                         <?= e($history['note']) ?>
                                     </div>
                                     <?php endif; ?>
@@ -180,10 +180,10 @@
 
                 <div class="lg:col-span-1 space-y-6">
 
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 overflow-hidden">
                         <div class="p-1 bg-gradient-to-r from-violet-500 to-fuchsia-600"></div>
                         <div class="p-6">
-                            <h3 class="font-bold text-slate-800 mb-4 text-lg">Tugaskan Asisten</h3>
+                            <h3 class="font-bold text-slate-200 mb-4 text-lg">Tugaskan Asisten</h3>
 
                             <?php if (!empty($problem['assigned_to_name'])): ?>
                             <div
@@ -199,11 +199,11 @@
 
                             <form method="POST" action="<?= url('/admin/problems/' . $problem['id'] . '/assign') ?>">
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-xs font-bold text-slate-500 uppercase">Pilih
+                                    <label class="block mb-2 text-xs font-bold text-slate-400 uppercase">Pilih
                                         Asisten</label>
                                     <div class="relative">
                                         <select name="assigned_to"
-                                            class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-violet-100 focus:border-violet-500 block appearance-none"
+                                            class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-violet-100 focus:border-violet-500 block appearance-none"
                                             required>
                                             <option value="">-- Pilih Asisten --</option>
                                             <?php if (isset($assistants)): ?>
@@ -216,7 +216,7 @@
                                             <?php endif; ?>
                                         </select>
                                         <div
-                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-500">
+                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
                                             <i class="bi bi-chevron-down text-xs"></i>
                                         </div>
                                     </div>
@@ -229,19 +229,19 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 sticky top-6 overflow-hidden">
+                    <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 sticky top-6 overflow-hidden">
                         <div class="p-1 bg-gradient-to-r from-primary-500 to-indigo-600"></div>
                         <div class="p-6">
-                            <h3 class="font-bold text-slate-800 mb-4 text-lg">Update Status</h3>
+                            <h3 class="font-bold text-slate-200 mb-4 text-lg">Update Status</h3>
 
                             <form method="POST"
                                 action="<?= url('/admin/problems/' . $problem['id'] . '/update-status') ?>">
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-xs font-bold text-slate-500 uppercase">Status
+                                    <label class="block mb-2 text-xs font-bold text-slate-400 uppercase">Status
                                         Baru</label>
                                     <div class="relative">
                                         <select name="status"
-                                            class="w-full px-4 py-2.5 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block appearance-none"
+                                            class="w-full px-4 py-2.5 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block appearance-none"
                                             required>
                                             <option value="reported"
                                                 <?= $problem['status'] == 'reported' ? 'selected' : '' ?>>Reported
@@ -254,17 +254,17 @@
                                             </option>
                                         </select>
                                         <div
-                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-500">
+                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
                                             <i class="bi bi-chevron-down text-xs"></i>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-xs font-bold text-slate-500 uppercase">Catatan
+                                    <label class="block mb-2 text-xs font-bold text-slate-400 uppercase">Catatan
                                         Perbaikan</label>
                                     <textarea name="note" rows="4"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block resize-none placeholder:text-slate-400"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block resize-none placeholder:text-slate-400"
                                         placeholder="Jelaskan tindakan yang diambil..."></textarea>
                                 </div>
 

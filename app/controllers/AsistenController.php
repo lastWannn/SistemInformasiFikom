@@ -287,44 +287,6 @@ class AsistenController extends Controller
     }
 
     // ==========================================
-    // PAGE 3: JADWAL PIKET
-    // ==========================================
-
-    /**
-     * Display current asisten's schedule
-     * 
-     * Shows weekly schedule for logged-in asisten only
-     * 
-     * @return void
-     */
-    public function listAssistantSchedules()
-    {
-        $scheduleModel = $this->model('AssistantScheduleModel');
-        $settingsModel = $this->model('SettingsModel');
-
-        // 1. Ambil Semua Data Jadwal
-        $rawSchedules = $scheduleModel->getAllWithUser();
-
-        // 2. Ambil Jobdesk Global (Read Only)
-        $masterJob = [
-            'Putri' => $settingsModel->get('job_putri', 'Belum diatur'),
-            'Putra' => $settingsModel->get('job_putra', 'Belum diatur')
-        ];
-
-        // 3. Build matrix using model method
-        $matrix = $scheduleModel->buildScheduleMatrix($rawSchedules);
-        $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-        $data = [
-            'matrix' => $matrix,
-            'masterJob' => $masterJob,
-            'days' => $days,
-            'currentUserId' => $_SESSION['user_id'] ?? 0 // Untuk highlighting
-        ];
-
-        // Pastikan folder view sesuai: views/asisten/schedules/index.php
-        $this->view('asisten/schedules/index', $data);
-    }
 
     // Form Edit Masalah
     /**

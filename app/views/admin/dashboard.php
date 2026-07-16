@@ -3,7 +3,7 @@ $adminLayout = true; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="antialiased bg-slate-50 min-h-screen">
+<div class="antialiased bg-transparent min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -11,12 +11,12 @@ $adminLayout = true; ?>
 
             <div class="flex flex-col md:flex-row justify-between items-end gap-4">
                 <div>
-                    <h1 class="text-3xl font-black text-slate-900 tracking-tight">Dashboard Overview</h1>
-                    <p class="text-slate-500 mt-1">Pantau aktivitas laboratorium ICLABS secara real-time.</p>
+                    <h1 class="text-3xl font-black text-white tracking-tight">Dashboard Overview</h1>
+                    <p class="text-slate-400 mt-1">Pantau aktivitas laboratorium ICLABS secara real-time.</p>
                 </div>
-                <div class="flex items-center gap-3 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
+                <div class="flex items-center gap-3 bg-[#1c1b22] px-4 py-2 rounded-full shadow-sm border border-white/10">
                     <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                    <span class="text-xs font-bold text-slate-600 uppercase tracking-wide">
+                    <span class="text-xs font-bold text-slate-300 uppercase tracking-wide">
                         <?= date('l, d F Y') ?>
                     </span>
                 </div>
@@ -25,19 +25,19 @@ $adminLayout = true; ?>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
                 <div
-                    class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
+                    class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10 hover:border-primary-500/50 hover:shadow-primary-500/10 transition-all group">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Total Pengguna</p>
-                            <h3 class="text-3xl font-black text-slate-800 mt-2"><?= $stats['users'] ?></h3>
+                            <h3 class="text-3xl font-black text-white mt-2"><?= $stats['users'] ?></h3>
                         </div>
                         <div
-                            class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                             <i class="bi bi-people-fill"></i>
                         </div>
                     </div>
-                    <div class="mt-4 flex items-center gap-2 text-xs font-medium text-slate-500">
-                        <span class="text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded flex items-center gap-1">
+                    <div class="mt-4 flex items-center gap-2 text-xs font-medium text-slate-400">
+                        <span class="text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded flex items-center gap-1">
                             <i class="bi bi-arrow-up-short"></i> Active
                         </span>
                         <span>Terdaftar di sistem</span>
@@ -45,35 +45,35 @@ $adminLayout = true; ?>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
+                    class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10 hover:border-primary-500/50 hover:shadow-primary-500/10 transition-all group">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Laboratorium</p>
-                            <h3 class="text-3xl font-black text-slate-800 mt-2"><?= $stats['labs'] ?></h3>
+                            <h3 class="text-3xl font-black text-white mt-2"><?= $stats['labs'] ?></h3>
                         </div>
                         <div
-                            class="w-12 h-12 bg-violet-50 text-violet-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            class="w-12 h-12 bg-violet-500/20 text-violet-400 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                             <i class="bi bi-pc-display"></i>
                         </div>
                     </div>
-                    <div class="mt-4 text-xs font-medium text-slate-500">
+                    <div class="mt-4 text-xs font-medium text-slate-400">
                         Ruangan Siap Digunakan
                     </div>
                 </div>
 
                 <div
-                    class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all group">
+                    class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10 hover:border-primary-500/50 hover:shadow-primary-500/10 transition-all group">
                     <div class="flex justify-between items-start">
                         <div>
                             <p class="text-xs font-bold text-slate-400 uppercase tracking-wider">Kelas Semester Ini</p>
-                            <h3 class="text-3xl font-black text-slate-800 mt-2"><?= $stats['courses'] ?></h3>
+                            <h3 class="text-3xl font-black text-white mt-2"><?= $stats['courses'] ?></h3>
                         </div>
                         <div
-                            class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                            class="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
                             <i class="bi bi-calendar-check"></i>
                         </div>
                     </div>
-                    <div class="mt-4 text-xs font-medium text-slate-500">
+                    <div class="mt-4 text-xs font-medium text-slate-400">
                         Mata Kuliah Terjadwal
                     </div>
                 </div>
@@ -109,18 +109,18 @@ $adminLayout = true; ?>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-                <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h3 class="font-bold text-slate-800 mb-6 flex items-center gap-2">
-                        <i class="bi bi-bar-chart-fill text-primary-600"></i> Kesibukan Laboratorium
+                <div class="lg:col-span-2 bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                    <h3 class="font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="bi bi-bar-chart-fill text-primary-500"></i> Kesibukan Laboratorium
                     </h3>
                     <div class="h-64">
                         <canvas id="labChart"></canvas>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                    <h3 class="font-bold text-slate-800 mb-6 flex items-center gap-2">
-                        <i class="bi bi-pie-chart-fill text-violet-600"></i> Pengguna Sistem
+                <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                    <h3 class="font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="bi bi-pie-chart-fill text-violet-400"></i> Pengguna Sistem
                     </h3>
                     <div class="h-64 flex items-center justify-center">
                         <canvas id="userChart"></canvas>
@@ -128,22 +128,22 @@ $adminLayout = true; ?>
                 </div>
             </div>
 
-            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
-                <div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+            <div class="bg-[#1c1b22] rounded-2xl shadow-sm border border-white/10 overflow-hidden">
+                <div class="px-8 py-6 border-b border-white/10 flex justify-between items-center bg-white/5">
                     <div>
-                        <h3 class="font-bold text-slate-800 text-lg">Jadwal Praktikum Hari Ini</h3>
-                        <p class="text-xs text-slate-500 mt-1">Daftar sesi yang dijadwalkan untuk <?= date('d F Y') ?>
+                        <h3 class="font-bold text-white text-lg">Jadwal Praktikum Hari Ini</h3>
+                        <p class="text-xs text-slate-400 mt-1">Daftar sesi yang dijadwalkan untuk <?= date('d F Y') ?>
                         </p>
                     </div>
-                    <a href="<?= url('/schedule') ?>"
-                        class="text-sm font-bold text-primary-600 hover:text-primary-700 flex items-center gap-1">
+                    <a href="<?= url('/admin/schedules') ?>"
+                        class="text-sm font-bold text-primary-500 hover:text-primary-400 flex items-center gap-1">
                         Lihat Full Jadwal <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
 
                 <div class="overflow-x-auto">
                     <table class="w-full text-sm text-left">
-                        <thead class="bg-slate-50 text-slate-500 font-bold uppercase text-xs">
+                        <thead class="bg-white/5 text-slate-400 font-bold uppercase text-xs">
                             <tr>
                                 <th class="px-6 py-4">Waktu</th>
                                 <th class="px-6 py-4">Laboratorium</th>
@@ -152,7 +152,7 @@ $adminLayout = true; ?>
                                 <th class="px-6 py-4 text-center">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100">
+                        <tbody class="divide-y divide-white/10">
                             <?php if (!empty($todaySchedule)): ?>
                             <?php foreach ($todaySchedule as $sch):
                                     // Status sederhana berdasarkan jam
@@ -168,24 +168,24 @@ $adminLayout = true; ?>
                                         $statusText = 'Finished';
                                     }
                                 ?>
-                            <tr class="hover:bg-slate-50/80 transition-colors">
-                                <td class="px-6 py-4 font-mono font-medium text-slate-700">
+                            <tr class="hover:bg-white/5 transition-colors border-b border-white/10">
+                                <td class="px-6 py-4 font-mono font-medium text-slate-300">
                                     <?= substr($sch['start_time'], 0, 5) ?> - <?= substr($sch['end_time'], 0, 5) ?>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <span class="font-bold text-slate-800"><?= e($sch['lab_name']) ?></span>
+                                    <span class="font-bold text-white"><?= e($sch['lab_name']) ?></span>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <div class="font-medium text-slate-900"><?= e($sch['course_name']) ?></div>
-                                    <div class="text-xs text-slate-500"><?= e($sch['class_code']) ?></div>
+                                    <div class="font-medium text-white"><?= e($sch['course_name']) ?></div>
+                                    <div class="text-xs text-slate-400"><?= e($sch['class_code']) ?></div>
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="flex items-center gap-2">
                                         <div
-                                            class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-xs font-bold text-slate-600">
+                                            class="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-xs font-bold text-slate-300 border border-slate-700">
                                             <?= substr($sch['lecturer_name'] ?? '?', 0, 1) ?>
                                         </div>
-                                        <span class="text-slate-600"><?= e($sch['lecturer_name'] ?? '-') ?></span>
+                                        <span class="text-slate-300"><?= e($sch['lecturer_name'] ?? '-') ?></span>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 text-center">
@@ -198,7 +198,7 @@ $adminLayout = true; ?>
                             <?php endforeach; ?>
                             <?php else: ?>
                             <tr>
-                                <td colspan="5" class="px-6 py-12 text-center text-slate-400">
+                                <td colspan="5" class="px-6 py-12 text-center text-slate-500">
                                     <i class="bi bi-calendar-x text-3xl mb-2 block"></i>
                                     Tidak ada jadwal praktikum hari ini.
                                 </td>

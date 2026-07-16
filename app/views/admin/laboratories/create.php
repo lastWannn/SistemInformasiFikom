@@ -2,7 +2,7 @@
 $adminLayout = true; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 
-<div class="admin-layout antialiased bg-slate-50 min-h-screen">
+<div class="admin-layout antialiased bg-transparent min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -10,13 +10,13 @@ $adminLayout = true; ?>
 
             <div class="flex items-center gap-4 mb-8">
                 <a href="<?= url('/admin/laboratories') ?>"
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-primary-600 hover:border-primary-200 shadow-sm transition-all"
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1c1b22] border border-white/10 text-slate-400 hover:text-primary-500 hover:border-primary-500 shadow-sm transition-all"
                     title="Back to List">
                     <i class="bi bi-arrow-left text-lg"></i>
                 </a>
                 <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-slate-900">Add New Laboratory</h1>
-                    <p class="text-slate-500 text-sm mt-1">Register detailed information for lab facilities.</p>
+                    <h1 class="text-2xl font-bold tracking-tight text-white">Add New Laboratory</h1>
+                    <p class="text-slate-400 text-sm mt-1">Register detailed information for lab facilities.</p>
                 </div>
             </div>
 
@@ -26,59 +26,59 @@ $adminLayout = true; ?>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                     <div class="lg:col-span-2 space-y-6">
-                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
-                                <i class="bi bi-info-circle text-primary-600"></i> General Information
+                        <div class="bg-[#1c1b22] p-8 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                                <i class="bi bi-info-circle text-primary-500"></i> General Information
                             </h2>
 
                             <div class="space-y-6">
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Laboratory Name <span
+                                    <label class="block mb-2 text-sm font-semibold text-white">Laboratory Name <span
                                             class="text-rose-500">*</span></label>
                                     <input type="text" name="lab_name"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all placeholder-slate-500"
                                         placeholder="e.g. Multimedia Lab" required>
                                 </div>
 
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Location <span
+                                    <label class="block mb-2 text-sm font-semibold text-white">Location <span
                                             class="text-rose-500">*</span></label>
                                     <input type="text" name="location"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all placeholder-slate-500"
                                         placeholder="e.g. Building A, 2nd Floor" required>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-6">
                                     <div>
-                                        <label class="block mb-2 text-sm font-semibold text-slate-700">PC Count</label>
+                                        <label class="block mb-2 text-sm font-semibold text-white">PC Count</label>
                                         <div class="relative">
                                             <div
                                                 class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none text-slate-400">
                                                 <i class="bi bi-pc-display"></i>
                                             </div>
                                             <input type="number" name="pc_count"
-                                                class="w-full ps-11 p-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block"
+                                                class="w-full ps-11 p-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block placeholder-slate-500"
                                                 placeholder="0">
                                         </div>
                                     </div>
                                     <div>
-                                        <label class="block mb-2 text-sm font-semibold text-slate-700">TV Count</label>
+                                        <label class="block mb-2 text-sm font-semibold text-white">TV Count</label>
                                         <div class="relative">
                                             <div
                                                 class="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none text-slate-400">
                                                 <i class="bi bi-tv"></i>
                                             </div>
                                             <input type="number" name="tv_count"
-                                                class="w-full ps-11 p-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block"
+                                                class="w-full ps-11 p-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block placeholder-slate-500"
                                                 placeholder="0">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Description</label>
+                                    <label class="block mb-2 text-sm font-semibold text-white">Description</label>
                                     <textarea name="description" rows="4"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block resize-none"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block resize-none placeholder-slate-500"
                                         placeholder="Describe the lab functions..."></textarea>
                                 </div>
                             </div>
@@ -86,13 +86,13 @@ $adminLayout = true; ?>
                     </div>
 
                     <div class="lg:col-span-1 space-y-6">
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 sticky top-6">
-                            <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                                <i class="bi bi-image text-primary-600"></i> Lab Image
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10 sticky top-6">
+                            <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="bi bi-image text-primary-500"></i> Lab Image
                             </h2>
 
                             <div
-                                class="border-2 border-dashed border-slate-300 rounded-xl p-6 text-center hover:bg-slate-50 transition-colors group cursor-pointer relative">
+                                class="border-2 border-dashed border-white/10 rounded-xl p-6 text-center hover:bg-white/5 transition-colors group cursor-pointer relative">
                                 <input type="file" name="image_file" accept="image/*"
                                     class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                                     onchange="previewImage(event)">
@@ -101,14 +101,14 @@ $adminLayout = true; ?>
                                 </div>
                                 <div id="upload-placeholder">
                                     <i
-                                        class="bi bi-cloud-arrow-up text-4xl text-slate-300 group-hover:text-primary-500 transition-colors"></i>
-                                    <p class="text-sm text-slate-500 mt-2 font-medium">Click to upload photo</p>
+                                        class="bi bi-cloud-arrow-up text-4xl text-slate-400 group-hover:text-primary-500 transition-colors"></i>
+                                    <p class="text-sm text-slate-400 mt-2 font-medium">Click to upload photo</p>
                                     <p class="text-xs text-slate-400 mt-1">JPG, PNG up to 2MB</p>
                                 </div>
                             </div>
 
                             <button type="submit"
-                                class="w-full mt-6 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-xl text-sm px-5 py-3 transition-all shadow-lg shadow-primary-500/30 flex justify-center items-center gap-2">
+                                class="w-full mt-6 text-[#131218] bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:ring-primary-500/20 font-bold rounded-xl text-sm px-5 py-3 transition-all shadow-lg shadow-primary-500/30 flex justify-center items-center gap-2">
                                 <i class="bi bi-check-lg"></i>
                                 Save Laboratory
                             </button>

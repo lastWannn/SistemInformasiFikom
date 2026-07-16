@@ -8,7 +8,7 @@ $laboratories = $laboratories ?? [];
 
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 
-<div class="antialiased bg-slate-50 min-h-screen">
+<div class="antialiased bg-transparent min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -16,16 +16,16 @@ $laboratories = $laboratories ?? [];
 
             <div class="flex items-center gap-4 mb-8">
                 <a href="<?= url('/admin/schedules') ?>"
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-primary-600 hover:border-primary-200 shadow-sm transition-all"
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1c1b22] border border-white/10 text-slate-400 hover:text-primary-500 hover:border-primary-500 shadow-sm transition-all"
                     title="Kembali ke Daftar">
                     <i class="bi bi-arrow-left text-lg"></i>
                 </a>
                 <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-slate-900">Edit Jadwal Master</h1>
-                    <div class="flex items-center gap-2 text-sm text-slate-500 mt-1">
+                    <h1 class="text-2xl font-bold tracking-tight text-white">Edit Jadwal Master</h1>
+                    <div class="flex items-center gap-2 text-sm text-slate-400 mt-1">
                         <span>Manajemen Jadwal</span>
                         <i class="bi bi-chevron-right text-xs"></i>
-                        <span class="text-primary-600 font-medium">Plan ID #<?= $schedule['id'] ?></span>
+                        <span class="text-primary-500 font-medium">Plan ID #<?= $schedule['id'] ?></span>
                     </div>
                 </div>
             </div>
@@ -38,16 +38,16 @@ $laboratories = $laboratories ?? [];
 
                     <div class="lg:col-span-2 space-y-6">
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                                <i class="bi bi-journal-bookmark text-primary-600"></i> Detail Mata Kuliah
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="bi bi-journal-bookmark text-primary-500"></i> Detail Mata Kuliah
                             </h2>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div class="col-span-2">
-                                    <label class="block mb-2 text-sm font-bold text-slate-700">Lokasi
+                                    <label class="block mb-2 text-sm font-bold text-white">Lokasi
                                         Laboratorium</label>
                                     <select name="laboratory_id"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white"
                                         required>
                                         <?php foreach ($laboratories as $lab): ?>
                                         <option value="<?= $lab['id'] ?>"
@@ -58,21 +58,21 @@ $laboratories = $laboratories ?? [];
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block mb-2 text-sm font-bold text-slate-700">Mata Kuliah</label>
+                                    <label class="block mb-2 text-sm font-bold text-white">Mata Kuliah</label>
                                     <input type="text" name="course_name" value="<?= e($schedule['course_name']) ?>"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white placeholder-slate-500"
                                         required>
                                 </div>
                                 <div>
-                                    <label class="block mb-2 text-sm font-bold text-slate-700">Kode Kelas</label>
+                                    <label class="block mb-2 text-sm font-bold text-white">Kode Kelas</label>
                                     <input type="text" name="class_code" value="<?= e($schedule['class_code']) ?>"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white placeholder-slate-500"
                                         required>
                                 </div>
                                 <div>
-                                    <label class="block mb-2 text-sm font-bold text-slate-700">Program Studi</label>
+                                    <label class="block mb-2 text-sm font-bold text-white">Program Studi</label>
                                     <select name="program_study"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100">
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white">
                                         <option value="Teknik Informatika"
                                             <?= $schedule['program_study'] == 'Teknik Informatika' ? 'selected' : '' ?>>
                                             Teknik Informatika</option>
@@ -82,29 +82,29 @@ $laboratories = $laboratories ?? [];
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block mb-2 text-sm font-bold text-slate-700">Semester</label>
+                                    <label class="block mb-2 text-sm font-bold text-white">Semester</label>
                                     <input type="number" name="semester" value="<?= e($schedule['semester']) ?>"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white"
                                         min="1" max="8" required>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2">
-                                <i class="bi bi-people text-primary-600"></i> Dosen & Asisten
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                                <i class="bi bi-people text-primary-500"></i> Dosen & Asisten
                             </h2>
 
-                            <div class="mb-6 p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                <label class="block mb-3 text-sm font-bold text-slate-700">Dosen Pengampu</label>
+                            <div class="mb-6 p-4 bg-[#131218] rounded-xl border border-white/10">
+                                <label class="block mb-3 text-sm font-bold text-white">Dosen Pengampu</label>
                                 <div class="flex items-start gap-4">
                                     <div class="shrink-0">
                                         <img id="preview_lecturer" src="<?= $schedule['lecturer_photo'] ?>"
-                                            class="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md">
+                                            class="w-14 h-14 rounded-full object-cover border-2 border-white/10 shadow-md">
                                     </div>
                                     <div class="flex-1">
                                         <select name="lecturer_id" id="lecturer_id" onchange="updatePhoto('lecturer')"
-                                            class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100 cursor-pointer">
+                                            class="w-full px-4 py-3 bg-[#1c1b22] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 cursor-pointer text-white">
                                             <option value="" data-image="" data-name="Dosen">-- Pilih Dosen --</option>
                                             <?php foreach ($lecturers as $dosen): ?>
                                             <option value="<?= $dosen['id'] ?>"
@@ -120,17 +120,17 @@ $laboratories = $laboratories ?? [];
                             </div>
 
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <label class="block mb-3 text-sm font-bold text-slate-700">Asisten 1 (Utama)</label>
+                                <div class="p-4 bg-[#131218] rounded-xl border border-white/10">
+                                    <label class="block mb-3 text-sm font-bold text-white">Asisten 1 (Utama)</label>
                                     <div class="flex items-start gap-3">
                                         <div class="shrink-0">
                                             <img id="preview_asst1" src="<?= $schedule['assistant_1_photo'] ?>"
-                                                class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md">
+                                                class="w-12 h-12 rounded-full object-cover border-2 border-white/10 shadow-md">
                                         </div>
                                         <div class="flex-1">
                                             <select name="assistant_1_id" id="assistant_1_id"
                                                 onchange="updatePhoto('assistant_1')"
-                                                class="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-xl text-sm">
+                                                class="w-full px-3 py-2.5 bg-[#1c1b22] border border-white/10 rounded-xl text-sm text-white">
                                                 <option value="" data-image="" data-name="A1">-- Pilih --</option>
                                                 <?php foreach ($assistants as $ast): ?>
                                                 <option value="<?= $ast['id'] ?>"
@@ -145,18 +145,18 @@ $laboratories = $laboratories ?? [];
                                     </div>
                                 </div>
 
-                                <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <label class="block mb-3 text-sm font-bold text-slate-700">Asisten 2
+                                <div class="p-4 bg-[#131218] rounded-xl border border-white/10">
+                                    <label class="block mb-3 text-sm font-bold text-white">Asisten 2
                                         (Opsional)</label>
                                     <div class="flex items-start gap-3">
                                         <div class="shrink-0">
                                             <img id="preview_asst2" src="<?= $schedule['assistant_2_photo'] ?>"
-                                                class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-md">
+                                                class="w-12 h-12 rounded-full object-cover border-2 border-white/10 shadow-md">
                                         </div>
                                         <div class="flex-1">
                                             <select name="assistant_2_id" id="assistant_2_id"
                                                 onchange="updatePhoto('assistant_2')"
-                                                class="w-full px-3 py-2.5 bg-white border border-slate-200 rounded-xl text-sm">
+                                                class="w-full px-3 py-2.5 bg-[#1c1b22] border border-white/10 rounded-xl text-sm text-white">
                                                 <option value="" data-image="" data-name="A2">-- Kosong --</option>
                                                 <?php foreach ($assistants as $ast): ?>
                                                 <option value="<?= $ast['id'] ?>"
@@ -175,15 +175,15 @@ $laboratories = $laboratories ?? [];
                     </div>
 
                     <div class="space-y-6">
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                                <i class="bi bi-clock text-primary-600"></i> Waktu & Sesi
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                <i class="bi bi-clock text-primary-500"></i> Waktu & Sesi
                             </h2>
                             <div class="space-y-4">
                                 <div>
-                                    <label class="block mb-2 text-sm font-bold text-slate-700">Hari (Master)</label>
+                                    <label class="block mb-2 text-sm font-bold text-white">Hari (Master)</label>
                                     <select name="day"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100">
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white">
                                         <?php $days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']; ?>
                                         <?php foreach ($days as $day): ?>
                                         <option value="<?= $day ?>" <?= $schedule['day'] == $day ? 'selected' : '' ?>>
@@ -193,21 +193,21 @@ $laboratories = $laboratories ?? [];
                                 </div>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div>
-                                        <label class="block mb-2 text-sm font-bold text-slate-700">Jam Mulai</label>
+                                        <label class="block mb-2 text-sm font-bold text-white">Jam Mulai</label>
                                         <input type="time" name="start_time" value="<?= $schedule['start_time'] ?>"
-                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                            class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white"
                                             required>
                                     </div>
                                     <div>
-                                        <label class="block mb-2 text-sm font-bold text-slate-700">Jam Selesai</label>
+                                        <label class="block mb-2 text-sm font-bold text-white">Jam Selesai</label>
                                         <input type="time" name="end_time" value="<?= $schedule['end_time'] ?>"
-                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-primary-100"
+                                            class="w-full px-4 py-3 bg-[#131218] border border-white/10 rounded-xl focus:ring-2 focus:ring-primary-500/20 text-white"
                                             required>
                                     </div>
                                 </div>
                                 <div class="pt-2">
                                     <div
-                                        class="p-3 bg-primary-50 rounded-xl border border-primary-100 text-xs text-primary-700 leading-relaxed">
+                                        class="p-3 bg-primary-500/10 rounded-xl border border-primary-500/20 text-xs text-primary-400 leading-relaxed">
                                         <i class="bi bi-info-circle-fill mr-1"></i> Mengubah jam master akan memperbarui
                                         waktu pada semua sesi praktikum yang berstatus <strong>scheduled</strong>.
                                     </div>
@@ -215,28 +215,28 @@ $laboratories = $laboratories ?? [];
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
-                                <i class="bi bi-camera text-primary-600"></i> Snapshot Saat Ini
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                                <i class="bi bi-camera text-primary-500"></i> Snapshot Saat Ini
                             </h2>
-                            <p class="text-[11px] text-slate-500 italic">Data nama/foto di bawah ini adalah yang
+                            <p class="text-[11px] text-slate-400 italic">Data nama/foto di bawah ini adalah yang
                                 tersimpan di jadwal (snapshot) saat ini:</p>
                             <div class="mt-3 space-y-2 text-xs">
-                                <div class="flex justify-between border-b border-slate-50 pb-1">
-                                    <span class="text-slate-500">Dosen:</span>
-                                    <span class="font-medium text-slate-800"><?= e($schedule['lecturer_name']) ?></span>
+                                <div class="flex justify-between border-b border-white/5 pb-1">
+                                    <span class="text-slate-400">Dosen:</span>
+                                    <span class="font-medium text-white"><?= e($schedule['lecturer_name']) ?></span>
                                 </div>
                                 <div class="flex justify-between pt-1">
-                                    <span class="text-slate-500">Asisten:</span>
+                                    <span class="text-slate-400">Asisten:</span>
                                     <span
-                                        class="font-medium text-slate-800"><?= e($schedule['assistant_1_name']) ?></span>
+                                        class="font-medium text-white"><?= e($schedule['assistant_1_name']) ?></span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="pt-4">
                             <button type="submit"
-                                class="w-full py-3.5 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-lg shadow-primary-500/30 transition-all flex items-center justify-center gap-2 transform active:scale-95">
+                                class="w-full py-3.5 bg-primary-500 hover:bg-primary-600 text-[#131218] font-bold rounded-xl shadow-lg shadow-primary-500/30 transition-all flex items-center justify-center gap-2 transform active:scale-95">
                                 <i class="bi bi-check2-circle"></i> Simpan Perubahan
                             </button>
                         </div>
@@ -281,7 +281,7 @@ function updatePhoto(roleKey) {
     } else {
         // Gunakan UI Avatars jika foto tidak tersedia
         const encodedName = encodeURIComponent(name);
-        img.src = `https://ui-avatars.com/api/?name=${encodedName}&background=e2e8f0&color=64748b`;
+        img.src = `https://ui-avatars.com/api/?name=${encodedName}&background=131218&color=ffffff`;
     }
 }
 

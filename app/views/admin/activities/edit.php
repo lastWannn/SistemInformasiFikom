@@ -1,7 +1,7 @@
 <?php $title = 'Edit Kegiatan'; ?>
 <?php include APP_PATH . '/views/layouts/header.php'; ?>
 
-<div class="antialiased bg-slate-50 min-h-screen">
+<div class="antialiased bg-transparent min-h-screen">
     <?php include APP_PATH . '/views/layouts/sidebar.php'; ?>
 
     <main class="p-4 sm:ml-64 pt-8 transition-all duration-300">
@@ -9,16 +9,16 @@
 
             <div class="flex items-center gap-4 mb-8">
                 <a href="<?= url('/admin/activities') ?>"
-                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-slate-200 text-slate-500 hover:text-primary-600 hover:border-primary-200 shadow-sm transition-all"
+                    class="w-10 h-10 flex items-center justify-center rounded-xl bg-[#1c1b22] border border-white/10 text-slate-400 hover:text-primary-500 hover:border-primary-500 shadow-sm transition-all"
                     title="Kembali">
                     <i class="bi bi-arrow-left text-lg"></i>
                 </a>
                 <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-slate-900">Edit Kegiatan</h1>
-                    <div class="flex items-center gap-2 text-sm text-slate-500 mt-1">
+                    <h1 class="text-2xl font-bold tracking-tight text-white">Edit Kegiatan</h1>
+                    <div class="flex items-center gap-2 text-sm text-slate-400 mt-1">
                         <span>Manajemen Kegiatan</span>
                         <i class="bi bi-chevron-right text-xs"></i>
-                        <span class="text-primary-600 font-medium">Edit #<?= $activity['id'] ?></span>
+                        <span class="text-primary-500 font-medium">Edit #<?= $activity['id'] ?></span>
                     </div>
                 </div>
             </div>
@@ -32,21 +32,21 @@
 
                     <div class="lg:col-span-2 space-y-6">
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-lg font-semibold text-slate-800 mb-5 pb-4 border-b border-slate-100">
-                                <i class="bi bi-pencil-square mr-2 text-primary-600"></i>Informasi Utama
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-lg font-semibold text-white mb-5 pb-4 border-b border-white/5">
+                                <i class="bi bi-pencil-square mr-2 text-primary-500"></i>Informasi Utama
                             </h2>
 
                             <div class="mb-5">
-                                <label class="block mb-2 text-sm font-semibold text-slate-700">Judul Kegiatan <span
+                                <label class="block mb-2 text-sm font-semibold text-white">Judul Kegiatan <span
                                         class="text-rose-500">*</span></label>
                                 <input type="text" name="title" value="<?= e($activity['title']) ?>"
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all placeholder:text-slate-400"
+                                    class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all placeholder:text-slate-500"
                                     placeholder="Masukkan judul kegiatan..." required>
                             </div>
 
                             <div class="mb-5">
-                                <label class="block mb-2 text-sm font-semibold text-slate-700">Link Eksternal (URL)
+                                <label class="block mb-2 text-sm font-semibold text-white">Link Eksternal (URL)
                                     <span class="text-rose-500">*</span></label>
                                 <div class="relative">
                                     <div
@@ -55,32 +55,32 @@
                                     </div>
                                     <input type="url" name="link_url"
                                         value="<?= e($activity['link_url'] ?? $activity['link'] ?? '') ?>"
-                                        class="w-full ps-11 p-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all font-mono text-xs sm:text-sm placeholder:text-slate-400"
+                                        class="w-full ps-11 p-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all font-mono text-xs sm:text-sm placeholder:text-slate-500"
                                         placeholder="https://..." required>
                                 </div>
-                                <p class="mt-2 text-xs text-slate-500">Pastikan link diawali dengan http:// atau
+                                <p class="mt-2 text-xs text-slate-400">Pastikan link diawali dengan http:// atau
                                     https://</p>
                             </div>
 
                             <div>
-                                <label class="block mb-2 text-sm font-semibold text-slate-700">Deskripsi Singkat</label>
+                                <label class="block mb-2 text-sm font-semibold text-white">Deskripsi Singkat</label>
                                 <textarea name="description" rows="4"
-                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all resize-none placeholder:text-slate-400"
+                                    class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all resize-none placeholder:text-slate-500"
                                     placeholder="Tuliskan ringkasan singkat..."><?= e($activity['description']) ?></textarea>
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-lg font-semibold text-slate-800 mb-5 pb-4 border-b border-slate-100">
-                                <i class="bi bi-sliders mr-2 text-primary-600"></i>Pengaturan
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-lg font-semibold text-white mb-5 pb-4 border-b border-white/5">
+                                <i class="bi bi-sliders mr-2 text-primary-500"></i>Pengaturan
                             </h2>
 
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Kategori</label>
+                                    <label class="block mb-2 text-sm font-semibold text-white">Kategori</label>
                                     <div class="relative">
                                         <select name="activity_type"
-                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block appearance-none transition-all cursor-pointer">
+                                            class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block appearance-none transition-all cursor-pointer">
                                             <optgroup label="Publikasi Umum">
                                                 <option value="news"
                                                     <?= $activity['activity_type'] == 'news' ? 'selected' : '' ?>>Berita
@@ -132,7 +132,7 @@
                                         <span class="text-rose-500">*</span></label>
                                     <div class="relative">
                                         <select name="status"
-                                            class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block appearance-none transition-all cursor-pointer">
+                                            class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block appearance-none transition-all cursor-pointer">
                                             <option value="published"
                                                 <?= ($activity['status'] ?? '') == 'published' ? 'selected' : '' ?>>
                                                 Published (Tayang)</option>
@@ -144,17 +144,17 @@
                                                 Cancelled (Batal)</option>
                                         </select>
                                         <div
-                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-500">
+                                            class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
                                             <i class="bi bi-chevron-down"></i>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label class="block mb-2 text-sm font-semibold text-slate-700">Tanggal
+                                    <label class="block mb-2 text-sm font-semibold text-white">Tanggal
                                         Posting</label>
                                     <input type="date" name="activity_date" value="<?= e($activity['activity_date']) ?>"
-                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 text-slate-900 text-sm rounded-xl focus:ring-2 focus:ring-primary-100 focus:border-primary-500 block transition-all"
+                                        class="w-full px-4 py-3 bg-[#131218] border border-white/10 text-white text-sm rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 block transition-all"
                                         required>
                                 </div>
                             </div>
@@ -164,14 +164,14 @@
 
                     <div class="lg:col-span-1 space-y-6">
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-                            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Media Gambar</h2>
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10">
+                            <h2 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Media Gambar</h2>
 
                             <div class="mb-4">
-                                <label class="block mb-2 text-xs font-medium text-slate-500">Cover Saat Ini</label>
+                                <label class="block mb-2 text-xs font-medium text-slate-400">Cover Saat Ini</label>
                                 <?php if (!empty($activity['image_cover'])): ?>
                                 <div
-                                    class="relative aspect-video rounded-xl overflow-hidden border border-slate-200 group shadow-sm">
+                                    class="relative aspect-video rounded-xl overflow-hidden border border-white/10 group shadow-sm">
                                     <?php 
                                             $imgSrc = (strpos($activity['image_cover'], 'http') === 0) 
                                                 ? $activity['image_cover'] 
@@ -187,7 +187,7 @@
                                 </div>
                                 <?php else: ?>
                                 <div
-                                    class="aspect-video rounded-xl bg-slate-100 border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400">
+                                    class="aspect-video rounded-xl bg-[#131218] border-2 border-dashed border-white/10 flex flex-col items-center justify-center text-slate-500">
                                     <i class="bi bi-image-alt text-3xl mb-2"></i>
                                     <span class="text-xs">Tidak ada gambar</span>
                                 </div>
@@ -195,17 +195,17 @@
                             </div>
 
                             <div>
-                                <label class="block mb-2 text-xs font-medium text-slate-500">Ganti Gambar
+                                <label class="block mb-2 text-xs font-medium text-slate-400">Ganti Gambar
                                     (Opsional)</label>
                                 <label
-                                    class="flex flex-col items-center justify-center w-full h-32 border-2 border-primary-100 border-dashed rounded-xl cursor-pointer bg-primary-50/30 hover:bg-primary-50 hover:border-primary-300 transition-all group relative overflow-hidden">
+                                    class="flex flex-col items-center justify-center w-full h-32 border-2 border-primary-500/20 border-dashed rounded-xl cursor-pointer bg-primary-500/5 hover:bg-primary-500/10 hover:border-primary-500/40 transition-all group relative overflow-hidden">
                                     <div class="flex flex-col items-center justify-center pt-5 pb-6 text-center px-2"
                                         id="placeholder-content">
                                         <i
-                                            class="bi bi-cloud-arrow-up text-2xl text-primary-400 group-hover:text-primary-600 mb-2 transition-colors"></i>
-                                        <p class="mb-1 text-xs text-slate-500"><span
-                                                class="font-semibold text-primary-600">Klik upload</span></p>
-                                        <p class="text-[10px] text-slate-400">Max. 2MB</p>
+                                            class="bi bi-cloud-arrow-up text-2xl text-primary-500/50 group-hover:text-primary-500 mb-2 transition-colors"></i>
+                                        <p class="mb-1 text-xs text-slate-400"><span
+                                                class="font-semibold text-primary-500">Klik upload</span></p>
+                                        <p class="text-[10px] text-slate-500">Max. 2MB</p>
                                     </div>
 
                                     <img id="image-preview"
@@ -217,23 +217,23 @@
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 sticky top-4">
-                            <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Aksi</h2>
+                        <div class="bg-[#1c1b22] p-6 rounded-2xl shadow-sm border border-white/10 sticky top-4">
+                            <h2 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Aksi</h2>
                             <div class="flex flex-col gap-3">
                                 <button type="submit"
-                                    class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-semibold rounded-xl text-sm px-5 py-3 transition-all shadow-lg shadow-primary-500/30 flex justify-center items-center gap-2 group">
+                                    class="w-full text-[#131218] bg-primary-500 hover:bg-primary-600 focus:ring-4 focus:ring-primary-500/20 font-bold rounded-xl text-sm px-5 py-3 transition-all shadow-lg shadow-primary-500/30 flex justify-center items-center gap-2 group">
                                     <i class="bi bi-check-lg text-lg"></i>
                                     <span>Simpan Perubahan</span>
                                 </button>
 
                                 <a href="<?= url('/admin/activities') ?>"
-                                    class="w-full text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:text-slate-900 focus:ring-4 focus:ring-slate-100 font-medium rounded-xl text-sm px-5 py-3 text-center transition-all">
+                                    class="w-full text-slate-300 bg-[#131218] border border-white/10 hover:bg-[#1c1b22] hover:text-white focus:ring-4 focus:ring-white/5 font-medium rounded-xl text-sm px-5 py-3 text-center transition-all">
                                     Batal
                                 </a>
                             </div>
-                            <p class="text-xs text-slate-400 text-center mt-4">
+                            <p class="text-xs text-slate-500 text-center mt-4">
                                 Terakhir diupdate: <br>
-                                <span class="font-mono text-slate-500">
+                                <span class="font-mono text-slate-400">
                                     <?= !empty($activity['created_at']) ? date('d M Y, H:i', strtotime($activity['created_at'])) : '-' ?>
                                 </span>
                             </p>
